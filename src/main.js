@@ -4,6 +4,6 @@ import './js/about';
 import './js/benefits';
 import './js/projects';
 import './js/faq';
-import './js/coversr';
+import './js/covers';
 import './js/reviews';
 import './js/work-together';
