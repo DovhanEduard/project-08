@@ -61,3 +61,22 @@
     margin-bottom: 20px;
     text-align: center;
 }
+
+.swiper-slide{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ED3B44;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide-title{
+    color: #FAFAFA;
+}
+
+.swiper-wrapper{
+    display: flex;
+
+}
