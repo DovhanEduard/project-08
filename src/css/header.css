@@ -8,12 +8,15 @@
     /* Прозорий фон для хедера */
     position: absolute;
     /* Розміщення поверх секції Hero */
-    padding: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     /* Хедер на всю ширину сторінки */
     box-sizing: border-box;
     z-index: 1000;
-
+    margin: 0;
+    /* Видалено зайвий маргін */
 }
 
 /* Стилі для контейнера логотипу */
@@ -114,7 +117,6 @@
 /* Адаптивні стилі для логотипу та кнопок на мобільних пристроях */
 @media (max-width: 480px) {
     .header {
-        /* flex-direction: column; */
         align-items: flex-start;
     }
 
@@ -140,12 +142,20 @@
 }
 
 .burger-icon {
-    width: 28px;
-    height: 28px;
+    display: block;
     background-color: transparent;
-    margin: 0;
+    border: none;
     stroke-width: 2px;
     stroke: #fafafa;
+    padding: 0;
+    line-height: 0;
+}
+
+
+.close-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
 }
 
 @media (max-width: 768px) {
