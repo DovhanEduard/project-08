@@ -1,7 +1,7 @@
-<section class="about-me" id="about">
+<section class="section about-me-section" id="about">
     <div class="container about-me-container">
         <h2 class="visually-hidden">About me</h2>
-        <div>
+        <div class="about-intro-text">
             <p class="intro-text">
                 I WORK WITH PEOPLE ALL OVER THE WORLD TO CREATE IMPRESSIVE AND
                 <span class="highlight-red">FUNCTIONAL</span>
@@ -9,7 +9,7 @@
                 THAT REFLECT EACH CLIENT'S UNIQUE PERSONALITY.
             </p>
         </div>
-        <div>
+        <div class="about-intro-img">
             <picture>
                 <source srcset="
                     ./img/about/about-desk@1x.jpg, 
@@ -26,19 +26,26 @@
                 <source srcset="
                     ./img/about/about-tab@1x.jpg, 
                     ./img/about/about-tab@2x.jpg" 
-                    media="(max-width: 767px)" />
-                <img class="about-me-img" src="./img/about/about-mob@2x.jpg" alt="men" />
+                    media="(max-width: 767px)" 
+                />
+                <img 
+                class="about-me-img" 
+                src="./img/about/about-mob@1x.jpg" 
+                alt="men" 
+                />
             </picture>
         </div>
     </div>
     <div class="container accordion-container">
         <div class="ac">
-            <h2 class="ac-header">ABOUT ME</h2>
-            <button type="button" class="ac-trigger">
-                <svg class="arrow-down" width="36" height="36">
-                    <use href="../img/icons/sprite.svg#icon-arrow-down"></use>
-                </svg>
-            </button>
+            <div class="ac-box">
+                <h2 class="ac-header">ABOUT ME</h2>
+                <button type="button" class="ac-trigger">
+                    <svg class="arrow-down" width="36" height="36">
+                        <use href="../img/icons/sprite.svg#icon-arrow-down"></use>
+                    </svg>
+                </button>
+            </div>
             <div class="ac-panel">
                 <p class="ac-text">I am Lloyd Jefferson, a talented programmer with extensive expertise in software development. I have an understanding of
                 different programming languages and technologies, always ready to improve my skills. I always follow the latest trends
@@ -55,22 +62,75 @@
         </div>
     
         <div class="ac">
-            <h2 class="ac-header">
-                <button type="button" class="ac-trigger">Lorem ipsum dolor sit amet.</button>
-            </h2>
+            <div class="ac-box">
+                <h2 class="ac-header">ROLE</h2>
+                <button type="button" class="ac-trigger">
+                    <svg class="arrow-down" width="36" height="36" border-radius="50px">
+                        <use href="../img/icons/sprite.svg#icon-arrow-down"></use>
+                    </svg>
+                </button>
+            </div>
             <div class="ac-panel">
-                <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <ul>
+                    <li>
+                        <p>Frontend development</p>
+                    </li>
+                    <li>
+                        <p>HeadlessCMS,Wordpress</p>
+                    </li>
+                    <li>
+                        <p>Blender(enjoy)</p>
+                    </li>
+                </ul>
             </div>
         </div>
     
         <div class="ac">
-            <h2 class="ac-header">
-                <button type="button" class="ac-trigger">Lorem ipsum dolor sit amet.</button>
-            </h2>
+            <div class="ac-box">
+                <h2 class="ac-header">EDUCATION</h2>
+                <button type="button" class="ac-trigger">
+                    <svg class="arrow-down" width="36" height="36">
+                        <use href="../img/icons/sprite.svg#icon-arrow-down"></use>
+                    </svg>
+                </button>
+            </div>
             <div class="ac-panel">
-                <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <ul>
+                    <li>
+                        <p>2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York</p>
+                    </li>
+                    <li>
+                        <p>2019 - 2020 / Advanced Web Development Certificate, GoIT IT School, New York</p>
+                    </li>
+                    <li>
+                        <p>2020 - 2022 / Advanced Blender Animation Techniques, Udemy</p>
+                    </li>
+                </ul>
             </div>
         </div>
+    </div>
+
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
     </div>
 
 </section>
