@@ -1,5 +1,7 @@
+/* ==============================================mobile ============================================================ */
+/* ===========================================common================================================================= */
 .hero-section{
-background-image: url(/img/hero/bc-hero-mob@1x.png) no-repeat center center fixed;
+background-image: url(/img/hero/bc-hero-mob@1x.png);
 
 padding-top: 281px;
 }
@@ -28,10 +30,10 @@ padding-top: 281px;
 }
 
 .social-links{
- display: flex;
- gap: 4px;
+    display: flex;
+    gap: 4px;
  
-margin-bottom: 32px;
+    margin-bottom: 32px;
 }
 
 .social-link{
@@ -69,8 +71,51 @@ margin-bottom: 32px;
     border-radius: 60px;
     padding: 10px 12px;
     width: 178px;
-    height: 37px
+    height: 37px;
 }
 
+@media only screen and (min-width: 768px){
+    .title-name{
+        font-size: 90px;
+
+        width: 632px;
+        height: 450px;
+
+        margin-bottom: 187px;
+    }
+
+    .hero-section{
+        padding-top: 281px;
+
+        min-width: 768px;
+        height: 1024px;
+
+        
+        padding-right: 32px;
+        padding-left: 32px;
+
+    }
+
+    .contact{
+        justify-content: flex-end;
+    }
+
+    .social-links{
+        gap: 8px;
+    }
+
+    .social-link{
+        padding: 18px 16px;
+        width: 55px;
+        height: 55px;
+    }
+
+    .email{
+        padding: 18px 24px;
+        width: 223px;
+        height: 55px;
+    }
+
+}
 
 
