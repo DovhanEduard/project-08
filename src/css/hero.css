@@ -1,6 +1,6 @@
 /* ==============================================mobile ============================================================ */
 /* ===========================================common================================================================= */
-.hero-section{
+.container-hero{
 background-image: url(/img/hero/bc-hero-mob@1x.png);
 
 padding-top: 281px;
@@ -84,7 +84,7 @@ padding-top: 281px;
         margin-bottom: 187px;
     }
 
-    .hero-section{
+    .container-hero{
         padding-top: 281px;
 
         min-width: 768px;
