@@ -1,9 +1,17 @@
 /* ==============================================mobile ============================================================ */
 /* ===========================================common================================================================= */
 .container-hero{
-background-image: url(/img/hero/bc-hero-mob@1x.png);
+    background-image: url(/img/hero/bc-hero-mob@1x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
-padding-top: 281px;
+    padding-top: 281px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 212px;
 }
 
 .title-name {
@@ -16,7 +24,7 @@ padding-top: 281px;
     color: #fafafa;
 
     /* margin-top: 281px; */
-    margin-bottom: 212px;
+    /* margin-bottom: 212px; */
     text-align: left;
     width: 343px;
     height: 250px;
@@ -27,6 +35,9 @@ padding-top: 281px;
     gap: 4px;
 
     justify-content: center;
+
+    height: 37px;
+    margin-bottom: 32px;
 }
 
 .social-links{
@@ -53,6 +64,8 @@ padding-top: 281px;
     width: 37px;
     height: 37px;
 
+
+
 }
 
 
@@ -75,48 +88,107 @@ padding-top: 281px;
 }
 
 @media only screen and (min-width: 768px){
-    .title-name{
-        font-size: 90px;
+.title-name{
+    font-size: 90px;
 
-        width: 632px;
-        height: 450px;
+    width: 632px;
+    /* height: 450px; */
 
-        margin-bottom: 187px;
-    }
+    /* margin-bottom: 187px; */
+}
 
-    .container-hero{
-        padding-top: 281px;
+.container-hero{
+    padding-top: 300px;
 
-        min-width: 768px;
-        height: 1024px;
-
-        
-        padding-right: 32px;
-        padding-left: 32px;
-
-    }
-
-    .contact{
-        justify-content: flex-end;
-    }
-
-    .social-links{
-        gap: 8px;
-    }
-
-    .social-link{
-        padding: 18px 16px;
-        width: 55px;
-        height: 55px;
-    }
-
-    .email{
-        padding: 18px 24px;
-        width: 223px;
-        height: 55px;
-    }
+    min-width: 768px;
+    height: 1024px;
     
+    padding-right: 32px;
+    padding-left: 32px;
+
+    gap: 187px;
 
 }
 
+.contact{
+    justify-content: flex-end;
+
+    height: 55px;
+}
+
+.social-links{
+    gap: 8px;
+}
+
+.social-link{
+    padding: 18px 16px;
+    width: 55px;
+    height: 55px;
+}
+
+.email{
+    padding: 18px 24px;
+    width: 223px;
+    height: 55px;
+}
+    
+.container-hero{
+    background-image: url(/img/hero/bc-hero-tab@1x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+}
+
+@media only screen and (min-width: 1440px){
+.container-hero{
+    background-image: url(/img/hero/bc-hero-desk@1x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    min-width: 1440px;
+    min-height: 900px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    position: relative;
+
+    padding-top: 300px;
+}
+
+.title-name {
+    font-size: 90px;
+
+    width: 1084px;
+    height: 270px;
+
+    /* margin-bottom: 243px; */
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.contact{
+    justify-content: flex-end;
+
+}
+
+.email{
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    padding: 18px 24px;
+    width: 223px;
+    height: 55px;
+}
+
+}
 
