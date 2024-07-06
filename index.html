@@ -21,7 +21,9 @@
     />
     
     <script type="module" crossorigin src="/project-08/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/project-08/assets/index-b7b7f782.css">
+    <link rel="modulepreload" crossorigin href="/project-08/assets/vendor-d96d9533.js">
+    <link rel="stylesheet" href="/project-08/assets/vendor-00a39230.css">
+    <link rel="stylesheet" href="/project-08/assets/index-3095d5b4.css">
   </head>
   <body>
     <header class="header container">
@@ -469,21 +471,23 @@
           <h1>TOGETHER</h1>
         </div>
       </div>
-
       <form id="contact-form">
-        <input
-          id="email"
-          type="email"
-          placeholder="clients@gmail.com"
-          required
-          pattern="^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$"
-        />
-        <span id="email-message" class="input-message"></span>
-        <input id="comments" type="text" placeholder="comments" required />
-        <span id="comments-message" class="input-message"></span>
+        <div class="input-container">
+          <input
+            id="email"
+            type="email"
+            placeholder="clients@gmail.com"
+            required
+            pattern="^\w+([.-]?\w+)@\w+([.-]?\w+)(\.\w{2,3})+$"
+          />
+          <span class="input-message" id="email-message"></span>
+        </div>
+        <div class="input-container">
+          <input id="comments" type="text" placeholder="comments" required />
+          <span class="input-message" id="comments-message"></span>
+        </div>
         <button class="send-btn" type="submit">Send</button>
       </form>
-
       <div class="contact-info">
         <a href="mailto:lloydjefferson@gmail.com">lloydjefferson@gmail.com</a>
         <a href="tel:+380111111111">+380 11 111 11 11</a>
@@ -491,8 +495,6 @@
     </div>
   </div>
 </footer>
-
-<script src="./js/work-together.js"></script>
 
     
     
