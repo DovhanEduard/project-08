@@ -10,7 +10,7 @@
     text-align: center;
     width: 100%;
     height: 500px;
-    background-color: #3B3B3B;
+    background-color: #242527;
     border-radius: 24px;
     padding: 32px;
 }
@@ -41,7 +41,7 @@
 .section.about-me-section {
     padding-top: 0;
     padding-bottom: 0;
-    background-color: #242527;
+    /* background-color: #242527; */
     
 }
 
@@ -50,7 +50,7 @@
 
 .about-intro-img{
     width: 100%;
-    max-width: 300px;
+    /* max-width: 300px; */
     border-radius: 24px;
 }
 .about-me-img {
@@ -84,13 +84,14 @@
     transform: rotate(180deg);
 }
 
-.swiper{
+.about-swiper{
     width: 100%;
+    height: 130px;
     padding: 20px 0;
-    margin-top: 32px;
+    /* margin-top: 32px; */
 }
 
-.swiper-slide{
+.about-swiper-slide{
     width: 130px;
     height: 130px;
     border-radius: 50%;
@@ -102,7 +103,7 @@
     
 }
 
-.swiper-slide.is-active {
+.about-swiper-slide.is-active {
     background-color: #ED3B44;
     border: none;
 }
@@ -112,13 +113,13 @@
     text-align: center;
 }
 
-.swiper-wrapper{
+.about-swiper-wrapper{
     display: flex;
     align-items: center;
 
 }
 
-.swiper-button-next {
+.about-swiper-button-next {
     color: #FAFAFA;
     width: 28px;
     height: 28px;

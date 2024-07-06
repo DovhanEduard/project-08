@@ -52,42 +52,53 @@ const initializeAccordion = () => {
 initializeAccordion();
 
 
-
-    const swiper = new Swiper('.swiper', {
-      slidesPerView: 2, 
-      spaceBetween: 0,
-       loop: true, 
-       navigation: {
-        nextEl: '.swiper-button-next',
-      },
-      breakpoints: {
+document.addEventListener('DOMContentLoaded', function () {
+  const swiper = new Swiper('.about-swiper', {
+    slidesPerView: 2,
+    spaceBetween: 0,
+    direction: 'horizontal',
+    loop: true,
+    navigation: {
+      nextEl: '.about-swiper-button-next',
+    },
+    breakpoints: {
         
-        320: {
-          slidesPerView: 2,
-          spaceBetween: 10,
-        },
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
        
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        }
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
       }
-    });
+    }
+  });
 
    
-    const slides = document.querySelectorAll('.swiper-slide');
+  const slides = document.querySelectorAll('.about-swiper-slide');
+  slides.forEach(slide => slide.classList.add('visually-hidden'));
+  slides[0].classList.remove('visually-hidden');
+  slides[0].classList.add('is-active');
+
+   
+  document.querySelector('.about-swiper-button-next').addEventListener('click', () => {
     slides.forEach(slide => slide.classList.add('visually-hidden'));
-    slides[0].classList.remove('visually-hidden');
-    slides[0].classList.add('is-active');
+    const activeSlide = document.querySelector('.about-swiper-slide.swiper-slide-active');
+    activeSlide.classList.remove('visually-hidden');
+    activeSlide.classList.add('is-active');
+  });
+  
+});
 
-   
-    document.querySelector('.swiper-button-next').addEventListener('click', () => {
-      slides.forEach(slide => slide.classList.add('visually-hidden'));
-      const activeSlide = document.querySelector('.swiper-slide.swiper-slide-active');
-      activeSlide.classList.remove('visually-hidden');
-      activeSlide.classList.add('is-active');
-    });
-    
+// const swiper = new Swiper('.swiper', {
+//   direction: 'horizontal',
+//   loop: true,
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//   },
+  
+// });
 
 
 
