@@ -3,49 +3,74 @@ import Swiper from 'swiper';
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
-document.addEventListener('DOMContentLoaded', function () {
+const accordionSettings = {
+  duration: 400,
+  showMultiple: false,
+  onOpen: function(currentElement) {
+    console.log(currentElement);
+  }
+};
 
-    const accordionTriggers = document.querySelectorAll('.ac-trigger');
+const accordionInstance = new Accordion('.accordion-container', accordionSettings);
 
-    accordionTriggers.forEach(trigger => {
+const initializeAccordion = () => {
+    const firstItem = document.querySelector('.accordion-container .ac-item');
+    if (firstItem) {
+        firstItem.classList.add('active');
+        const firstPanel = firstItem.querySelector('.ac-panel');
+        if (firstPanel) {
+            firstPanel.style.display = 'block';
+        }
+    }
+    
+    document.querySelectorAll('.accordion-container .ac-trigger').forEach(trigger => {
         trigger.addEventListener('click', function () {
-            const parent = trigger.closest('.ac-item');
-            const panel = parent.querySelector('.ac-panel');
-
-            if (panel.style.display === 'block') {
-                panel.style.display = 'none';
-                trigger.querySelector('.icon-arrow use').setAttribute('href', './img/icons/sprite.svg#icon-arrow-down');
+            const parentItem = this.closest('.ac-item');
+    
+            
+            if (parentItem.classList.contains('active')) {
+                parentItem.classList.remove('active');
+                parentItem.querySelector('.ac-panel').style.display = 'none';
             } else {
-                document.querySelectorAll('.ac-panel').forEach(p => p.style.display = 'none');
-                panel.style.display = 'block';
-                trigger.querySelector('.icon-arrow use').setAttribute('href', './img/icons/sprite.svg#icon-arrow-up');
+                parentItem.classList.add('active');
+                parentItem.querySelector('.ac-panel').style.display = 'block';
+            }
+
+            
+            if (!accordionSettings.showMultiple) {
+                document.querySelectorAll('.accordion-container .ac-item').forEach(item => {
+                    if (item !== parentItem && item.classList.contains('active')) {
+                        item.classList.remove('active');
+                        item.querySelector('.ac-panel').style.display = 'none';
+                    }
+                });
             }
         });
     });
+};
 
+initializeAccordion();
     
-    const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.swiper', {
         
-        direction: 'horizontal',
-        loop: true,
-        slidesPerView: 2, 
-        spaceBetween: 10,
-        
-
-        
-        navigation: {
-            nextEl: '.swiper-button-next',
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 2, 
+    spaceBetween: 10,
             
-        },
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-        },
-        mousewheel: {
-            invert: false,
-        },
+    navigation: {
+         nextEl: '.swiper-button-next',
+            
+    },
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+    },
+    mousewheel: {
+        invert: false,
+     },
         
-    });
 });
+
 
 
