@@ -9,18 +9,31 @@ document.addEventListener('DOMContentLoaded', function () {
   const commentsMessage = document.getElementById('comments-message');
 
   const validateEmail = () => {
-    if (!emailInput.validity.valid) {
+    // Более строгое регулярное выражение для проверки email
+    const emailRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
+    const currentValue = emailInput.value;
+
+    if (currentValue === '') {
+      emailInput.classList.remove('error', 'success');
+      emailMessage.textContent = '';
+      emailMessage.classList.remove('error', 'success');
+      return false;
+    } else if (!emailRegex.test(currentValue)) {
       emailInput.classList.add('error');
       emailInput.classList.remove('success');
-      emailMessage.textContent = 'Invalid email, try again';
+      emailMessage.textContent =
+        'Invalid email format. Please use example@domain.com';
       emailMessage.classList.add('error');
       emailMessage.classList.remove('success');
+      return false;
     } else {
       emailInput.classList.add('success');
       emailInput.classList.remove('error');
-      emailMessage.textContent = 'Success!';
+      emailMessage.textContent = 'Valid email format';
       emailMessage.classList.add('success');
       emailMessage.classList.remove('error');
+      return true;
     }
   };
 
@@ -31,12 +44,14 @@ document.addEventListener('DOMContentLoaded', function () {
       commentsMessage.textContent = 'Comments cannot be empty';
       commentsMessage.classList.add('error');
       commentsMessage.classList.remove('success');
+      return false;
     } else {
       commentsInput.classList.add('success');
       commentsInput.classList.remove('error');
-      commentsMessage.textContent = 'Success!';
+      commentsMessage.textContent = 'Valid comments';
       commentsMessage.classList.add('success');
       commentsMessage.classList.remove('error');
+      return true;
     }
   };
 
@@ -46,13 +61,10 @@ document.addEventListener('DOMContentLoaded', function () {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    validateEmail();
-    validateComments();
+    const isEmailValid = validateEmail();
+    const isCommentsValid = validateComments();
 
-    if (
-      emailInput.classList.contains('success') &&
-      commentsInput.classList.contains('success')
-    ) {
+    if (isEmailValid && isCommentsValid) {
       fetch('https://portfolio-js.b.goit.study/api/requests', {
         method: 'POST',
         headers: {
@@ -69,17 +81,17 @@ document.addEventListener('DOMContentLoaded', function () {
             data.title || 'Success',
             data.message || 'Form submitted successfully'
           );
-          if (data.title && data.message) {
-            form.reset();
-            emailInput.classList.remove('success');
-            commentsInput.classList.remove('success');
-            emailMessage.textContent = '';
-            commentsMessage.textContent = '';
-          }
+          form.reset();
+          emailInput.classList.remove('success');
+          commentsInput.classList.remove('success');
+          emailMessage.textContent = '';
+          commentsMessage.textContent = '';
         })
         .catch(error => {
           showModal('Error', error.message || 'An error occurred');
         });
+    } else {
+      showModal('Error', 'Please correct the form errors before submitting.');
     }
   });
 
