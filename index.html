@@ -21,9 +21,9 @@
     />
     
     <script type="module" crossorigin src="/project-08/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-08/assets/vendor-d96d9533.js">
-    <link rel="stylesheet" href="/project-08/assets/vendor-00a39230.css">
-    <link rel="stylesheet" href="/project-08/assets/index-60f8a9a8.css">
+    <link rel="modulepreload" crossorigin href="/project-08/assets/vendor-92a20347.js">
+    <link rel="stylesheet" href="/project-08/assets/vendor-fdb8a9a4.css">
+    <link rel="stylesheet" href="/project-08/assets/index-7139b84e.css">
   </head>
   <body>
     <header class="header container">
@@ -220,7 +220,7 @@
 </div>
 
     <div class="container">
-  <section class="section faq-section">
+  <section class="section faq-section" id="faq">
     <h2 class="faq-section-title">FAQ</h2>
     <ul class="faq-list">
       <li class="faq-list-item">
@@ -459,45 +459,44 @@
 <!-- <script src="./js/covers.js" type="module"></script> -->
     <!DOCTYPE html>
 <html lang="uk">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reviews</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/css/reviews.css" />
     <style>
-      #not-found {
-        display: none;
-      }
+        #not-found {
+            display: none;
+        }
+        .swiper-button-disabled {
+            opacity: 0.35;
+            cursor: not-allowed;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <h2>Reviews</h2>
     <div class="swiper-container">
-      <ul class="swiper-wrapper" id="reviews-list"></ul>
+        <ul class="swiper-wrapper" id="reviews-list"></ul>
     </div>
     <div id="not-found">Not found</div>
     <div class="navigation-buttons">
-      <button class="nav-btn left-btn" disabled>
-        <svg class="left-arrow">
-          <use href="/project-08/assets/sprite-488ad49d.svg#icon-arrow-right"></use>
-        </svg>
-      </button>
-      <button class="nav-btn">
-        <svg class="right-arrow">
-          <use href="/project-08/assets/sprite-488ad49d.svg#icon-arrow-right"></use>
-        </svg>
-      </button>
+        <button class="nav-btn left-btn swiper-button-disabled">
+            <svg class="left-arrow">
+                <use href="/project-08/assets/sprite-488ad49d.svg#icon-arrow-right"></use>
+            </svg>
+        </button>
+        <button class="nav-btn right-btn">
+            <svg class="right-arrow">
+                <use href="/project-08/assets/sprite-488ad49d.svg#icon-arrow-right"></use>
+            </svg>
+        </button>
     </div>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="/src/js/reviews.js"></script>
-  </body>
+</body>
 </html>
-
     <footer id="work-together">
   <div class="container">
     <div class="work-together">
