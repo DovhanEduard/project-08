@@ -87,9 +87,9 @@ input {
     border: none;
     border-bottom: 1px solid rgba(250, 250, 250, 0.2);
     background-color: transparent;
-    color: var(--main-text);
+    color: rgba(250, 250, 250, 0.6); 
     max-width: 343px;
-    transition: border-bottom-color 0.3s ease;
+    transition: border-bottom-color 0.3s ease, color 0.3s ease;
     width: 100%;
 }
 
@@ -97,7 +97,9 @@ input::placeholder {
     color: rgba(250, 250, 250, 0.6);
 }
 
+input:hover,
 input:focus {
+    color: #fafafa;
     outline: none;
     border-bottom-color: rgba(250, 250, 250, 0.6);
 }
@@ -147,6 +149,13 @@ input.error {
     border-radius: 50px;
     align-self: flex-start;
     border: none;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+}
+
+    .send-btn:hover {
+    background-color: #d13139; 
 }
 
 .contact-info {
@@ -156,6 +165,7 @@ input.error {
     margin-top: 32px;
     gap: 4px;
     width: 100%;
+    justify-content: flex-start;
 }
 
 .contact-info a {
@@ -169,8 +179,13 @@ input.error {
     text-align: center;
     white-space: nowrap;
     box-sizing: border-box;
+    transition: border-color 0.3s ease;
+
 }
 
+.contact-info a:hover {
+    border: 1px solid #fafafa;
+}
 .modal {
     display: flex;
     flex-direction: column;
@@ -260,10 +275,11 @@ input.error {
         min-width: 150px;
         min-height: 150px;
         border-radius: 50%;
+        font-size: 18px;
     }
 
-    .contact-info {
-        flex-direction: row;
+    .contact-info a {
+        padding: 18px 32px;
     }
 }
 
@@ -296,6 +312,7 @@ input.error {
         margin-top: 0;
         padding: 20px;
         margin-right: 196px;
+        font-size: 20px;
     }
 }
 
