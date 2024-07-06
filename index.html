@@ -21,7 +21,7 @@
     />
     
     <script type="module" crossorigin src="/project-08/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/project-08/assets/index-d6c871a4.css">
+    <link rel="stylesheet" href="/project-08/assets/index-b7b7f782.css">
   </head>
   <body>
     <header class="header container">
@@ -410,7 +410,47 @@
         </div>
     </div>
 </section>
-    
+    <!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/src/css/reviews.css" />
+    <style>
+      #not-found {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Reviews</h2>
+    <div class="swiper-container">
+      <ul class="swiper-wrapper" id="reviews-list"></ul>
+    </div>
+    <div id="not-found">Not found</div>
+    <div class="navigation-buttons">
+      <button class="nav-btn left-btn" disabled>
+        <svg class="left-arrow">
+          <use href="/project-08/assets/sprite-488ad49d.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+      <button class="nav-btn">
+        <svg class="right-arrow">
+          <use href="/project-08/assets/sprite-488ad49d.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/src/js/reviews.js"></script>
+  </body>
+</html>
+
     <footer id="work-together">
   <div class="container">
     <div class="work-together">
