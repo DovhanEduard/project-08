@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const commentsMessage = document.getElementById('comments-message');
 
   const validateEmail = () => {
-    // Более строгое регулярное выражение для проверки email
     const emailRegex =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
     const currentValue = emailInput.value;
