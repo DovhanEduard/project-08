@@ -1,0 +1,201 @@
+/* Загальні стилі для header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 16px;
+    background-color: transparent;
+    /* Прозорий фон для хедера */
+    position: absolute;
+    /* Розміщення поверх секції Hero */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /* Хедер на всю ширину сторінки */
+    box-sizing: border-box;
+    z-index: 1000;
+    margin: 0;
+    /* Видалено зайвий маргін */
+}
+
+/* Стилі для контейнера логотипу */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Стилі для зображення логотипу */
+.logo img {
+    border-radius: 18%;
+    width: 80px;
+    height: 80px;
+    background: url("/img/logo/logo@1x.jpg");
+}
+
+/* Стилі для тексту в логотипі */
+.logo span {
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+    margin-left: 8px;
+    align-self: flex-start;
+    /* Вирівнювання тексту по верху */
+}
+
+/* Стилі для навігації */
+.desktop-nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Стилі для меню */
+.menu-container {
+    position: relative;
+}
+
+.menu {
+    cursor: pointer;
+    color: white;
+    margin-right: 20px;
+}
+
+/* Стилі для випадаючого списку */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Показ випадаючого списку при додаванні класу 'show' */
+.dropdown.show {
+    display: block;
+}
+
+/* Стилі для кнопки "Order the project" */
+.order-btn {
+    background-color: #ff3333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/* Додаткові стилі для посилань і елементів навігації */
+.desktop-nav a,
+.desktop-nav .menu {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Медиа-запит для показу навігації тільки на планшетних та десктопних пристроях */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+}
+
+/* Медиа-запит для мобільного меню */
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
+/* Адаптивні стилі для логотипу та кнопок на мобільних пристроях */
+@media (max-width: 480px) {
+    .header {
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 0px;
+    }
+
+    .order-btn {
+        align-self: flex-end;
+    }
+}
+
+/* Додаткові адаптивні стилі для планшетів */
+@media (min-width: 481px) and (max-width: 768px) {
+    .menu-container {
+        margin-right: 10px;
+    }
+}
+
+/* Стилі для мобільного меню */
+.burger-menu {
+    display: none;
+}
+
+.burger-icon {
+    display: block;
+    background-color: transparent;
+    border: none;
+    stroke-width: 2px;
+    stroke: #fafafa;
+    padding: 0;
+    line-height: 0;
+}
+
+
+.close-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .mobile-menu a {
+        color: white;
+        padding: 15px;
+        text-decoration: none;
+        font-size: 24px;
+    }
+
+    .close-icon {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 28px;
+        height: 28px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        padding: 0;
+        line-height: 0;
+    }
+
+}
