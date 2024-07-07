@@ -11,6 +11,10 @@
   clip-path: inset(100%);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #1c1d20;
   font-family: 'Inter Tight', sans-serif;
