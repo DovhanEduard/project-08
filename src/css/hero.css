@@ -122,7 +122,7 @@
     align-items: center;
 }
 
-.social-link{
+/* .social-link{
     font-family: "Inter Tight", sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -139,7 +139,7 @@
     width: 37px;
     height: 37px;
 
-}
+} */
 
 
 .email {
@@ -158,6 +158,34 @@
     padding: 10px 12px;
     max-width: 178px;
     height: 37px;
+}
+
+@media only screen and (max-width: 374px){
+    .social-link-ig{
+        max-width: 30px;
+        height: 30px;
+    }
+
+    .social-link-fb{
+        max-width: 30px;
+        height: 30px;
+    }
+
+    .social-link-yt{
+        max-width: 30px;
+        height: 30px;
+    }
+
+    .social-link-gh{
+        max-width: 30px;
+        height: 30px;
+    }
+
+    .email{
+        max-width: 170px;
+        height: 30px;
+    }
+
 }
 
 /* ===========================================tablet========================================================== */
