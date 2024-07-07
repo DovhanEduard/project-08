@@ -62,6 +62,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 8px;
+    cursor: pointer;
 }
 
 /* Стилі для випадаючого списку */
@@ -111,7 +112,12 @@
     font-size: 16px;
     letter-spacing: -0.02em;
     color: #fafafa;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+}
+
+.order-btn:hover {
+    background-color: #e0373f;
 }
 
 /* Додаткові стилі для посилань і елементів навігації */
@@ -214,14 +220,18 @@
         padding: 14px 31px;
         width: auto;
         height: 45px;
-        background: #ed3b44;
+        background-color: #ed3b44;
         font-size: 14px;
         letter-spacing: -0.02em;
         color: #fafafa;
         margin-top: auto;
         border: none;
         margin-bottom: 64px;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
+    .order-btn-mobile:hover {
+        background-color: #e0373f;
     }
 }
 
