@@ -12,6 +12,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 212px;
+
 }
 
 .title-name {
@@ -36,7 +37,7 @@
     gap: 4px;
 
 
-    max-width: 342px;
+    /* max-width: 342px; */
     height: 37px;
 
     margin-bottom: 32px;
@@ -46,7 +47,7 @@
     display: flex;
     gap: 4px;
  
-    margin-bottom: 32px;
+    /* margin-bottom: 32px; */
 }
 
 .social-link-ig{
@@ -135,7 +136,7 @@
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 60px;
     padding: 10px ;
-    max-width: 37px;
+    width: 37px;
     height: 37px;
 
 }
@@ -289,6 +290,8 @@
 
 }
 
+/* ==========================================desktop============================================================ */
+
 @media only screen and (min-width: 1440px){
 .container-hero{
     background-image: url(/img/hero/bc-hero-desk@1x.png);
@@ -332,6 +335,36 @@
     padding: 18px 24px;
     width: 223px;
     height: 55px;
+}
+
+.email:hover,
+.email:focus {
+    border: 1px solid;
+    border-color: #fafafa;
+}
+
+.social-link-ig:hover,
+.social-link-ig:focus {
+    border: 1px solid;
+    border-color: #fafafa;
+}
+
+.social-link-fb:hover,
+.social-link-fb:focus {
+    border: 1px solid;
+    border-color: #fafafa;
+}
+
+.social-link-yt:hover,
+.social-link-yt:focus {
+    border: 1px solid;
+    border-color: #fafafa;
+}
+
+.social-link-gh:hover,
+.social-link-gh:focus {
+    border: 1px solid;
+    border-color: #fafafa;
 }
 
 }
