@@ -1,6 +1,6 @@
 .swiper-container {
   margin-bottom: 32px;
-  overflow: hidden; /* Ховає зайві картки */
+  overflow: hidden;
 }
 
 .swiper-wrapper {
@@ -10,7 +10,7 @@
 
 .swiper-slide {
   flex: 0 0 auto;
-  margin-right: 16px; /* Відстань між картками */
+  margin-right: 16px;
 }
 
 .review-title {
@@ -31,7 +31,7 @@
   background-color: #1c1d20;
   color: #fff;
   box-sizing: border-box;
-  height: 100%; /* Додаємо однакову висоту */
+  height: 100%;
 }
 
 .review-card img {
@@ -113,7 +113,7 @@
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1439px) {
   .swiper-slide {
-    width: calc(50% - 8px); /* Відстань між двома картками */
+    width: calc(50% - 8px);
   }
   .review-card {
     width: 100%;
@@ -124,7 +124,7 @@
 /* Desktop */
 @media (min-width: 1440px) {
   .swiper-slide {
-    width: calc(25% - 12px); /* Відстань між чотирма картками */
+    width: calc(25% - 12px);
   }
   .review-card {
     width: 100%;
