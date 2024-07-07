@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 
+
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
@@ -52,6 +53,11 @@ const initializeAccordion = () => {
 initializeAccordion();
 
 
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.about-swiper', {
     slidesPerView: 2,
@@ -65,12 +71,17 @@ document.addEventListener('DOMContentLoaded', function () {
         
       320: {
         slidesPerView: 2,
-        spaceBetween: 10,
+        spaceBetween: 0,
       },
        
       768: {
         slidesPerView: 3,
-        spaceBetween: 20,
+        spaceBetween: 0,
+      },
+
+      1440: {
+        slidesPerView: 6,
+        spaceBetween: 0,
       }
     }
   });
@@ -91,14 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
 });
 
-// const swiper = new Swiper('.swiper', {
-//   direction: 'horizontal',
-//   loop: true,
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//   },
-  
-// });
+
 
 
 
