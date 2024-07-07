@@ -1,7 +1,6 @@
-/* CSS */
-
 .swiper-container {
   margin-bottom: 32px;
+  overflow: hidden; /* Ховає зайві картки */
 }
 
 .swiper-wrapper {
@@ -11,7 +10,7 @@
 
 .swiper-slide {
   flex: 0 0 auto;
-  margin-right: 16px;
+  margin-right: 16px; /* Відстань між картками */
 }
 
 .review-title {
@@ -32,7 +31,7 @@
   background-color: #1c1d20;
   color: #fff;
   box-sizing: border-box;
-  width: 100%;
+  height: 100%; /* Додаємо однакову висоту */
 }
 
 .review-card img {
@@ -102,34 +101,33 @@
 
 /* Mobile */
 @media (max-width: 767px) {
-  .review-card {
-    width: 343px;
-    height: 302px;
-  }
-
   .swiper-slide {
-    display: block;
+    width: 100%;
+  }
+  .review-card {
+    width: 100%;
+    height: 302px;
   }
 }
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1439px) {
+  .swiper-slide {
+    width: calc(50% - 8px); /* Відстань між двома картками */
+  }
   .review-card {
-    width: 344px;
+    width: 100%;
     height: 302px;
   }
+}
 
-  .swiper-slide {
-    display: block;
-  }
-}
-.swiper-slide.hidden {
-  display: none;
-}
 /* Desktop */
 @media (min-width: 1440px) {
+  .swiper-slide {
+    width: calc(25% - 12px); /* Відстань між чотирма картками */
+  }
   .review-card {
-    width: 332px;
+    width: 100%;
     height: 302px;
   }
 }

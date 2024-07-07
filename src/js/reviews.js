@@ -12,26 +12,20 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateButtonState() {
     if (!swiper) return;
 
-    console.log('Swiper state:', swiper.isBeginning, swiper.isEnd);
-
     if (swiper.isBeginning) {
       leftBtn.classList.add('swiper-button-disabled');
       leftBtn.disabled = true;
-      console.log('Left button disabled');
     } else {
       leftBtn.classList.remove('swiper-button-disabled');
       leftBtn.disabled = false;
-      console.log('Left button enabled');
     }
 
     if (swiper.isEnd) {
       rightBtn.classList.add('swiper-button-disabled');
       rightBtn.disabled = true;
-      console.log('Right button disabled');
     } else {
       rightBtn.classList.remove('swiper-button-disabled');
       rightBtn.disabled = false;
-      console.log('Right button enabled');
     }
   }
   fetch('https://portfolio-js.b.goit.study/api/reviews')
@@ -95,14 +89,12 @@ document.addEventListener('DOMContentLoaded', () => {
       leftBtn.addEventListener('click', () => {
         if (!leftBtn.classList.contains('swiper-button-disabled')) {
           swiper.slidePrev();
-          console.log('Left button clicked');
         }
       });
 
       rightBtn.addEventListener('click', () => {
         if (!rightBtn.classList.contains('swiper-button-disabled')) {
           swiper.slideNext();
-          console.log('Right button clicked');
         }
       });
     })
