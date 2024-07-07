@@ -1,33 +1,9 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//   const swiper = new Swiper('.swiper', {
-//     slidesPerView: 1,
-//     spaceBetween: 30,
-//     loop: true,
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-//     on: {
-//       init: function () {
-//         updateArrowState(this);
-//       },
-//       slideChange: function () {
-//         updateArrowState(this);
-//       },
-//     },
-//   });
-
-//   function updateArrowState(swiper) {
-//     const prevButton = document.querySelector('.swiper-button-prev');
-//     const nextButton = document.querySelector('.swiper-button-next');
-
-//     prevButton.disabled = swiper.isBeginning;
-//     nextButton.disabled = swiper.isEnd;
-//   }
-// });
-
 import Swiper from 'swiper';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/keyboard';
+import 'swiper/css/mousewheel';
 
 document.addEventListener('DOMContentLoaded', () => {
   const leftBtn = document.querySelector('.swiper-btn-left');
@@ -35,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
+    spaceBetween: 16,
+    modules: [Navigation, Keyboard, Mousewheel],
     navigation: {
       nextEl: rightBtn,
       prevEl: leftBtn,
@@ -46,16 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       onlyInViewport: false,
     },
     mousewheel: true,
-    slidesPerView: 1,
-    spaceBetween: 16,
-    breakpoints: {
-      768: {
-        slidesPerView: 1,
-      },
-      1440: {
-        slidesPerView: 1,
-      },
-    },
+
     on: {
       slideChange: function () {
         updateArrowState(this);
@@ -70,6 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
   rightBtn.addEventListener('click', () => {
     swiper.slideNext();
   });
+
+  // rightBtn.addEventListener('click', () => {
+  //   if (swiper.activeIndex === 0) {
+  //     swiper.slideTo(1);
+  //   } else {
+  //     swiper.slideNext();
+  //   }
+  // });
 
   function updateArrowState(swiper) {
     leftBtn.disabled = swiper.isBeginning;
