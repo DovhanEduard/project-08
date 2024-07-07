@@ -1,27 +1,39 @@
+import Swiper from 'swiper/bundle';
+import 'swiper/swiper-bundle.css';
+
 document.addEventListener('DOMContentLoaded', () => {
   const reviewsList = document.getElementById('reviews-list');
   const notFound = document.getElementById('not-found');
   const leftBtn = document.querySelector('.left-btn');
-  const rightBtn = document.querySelector('.nav-btn:not(.left-btn)');
+  const rightBtn = document.querySelector('.right-btn');
 
-  function updateButtonState(swiper) {
+  let swiper;
+
+  function updateButtonState() {
+    if (!swiper) return;
+
+    console.log('Swiper state:', swiper.isBeginning, swiper.isEnd);
+
     if (swiper.isBeginning) {
-      leftBtn.classList.add('disabled');
+      leftBtn.classList.add('swiper-button-disabled');
       leftBtn.disabled = true;
+      console.log('Left button disabled');
     } else {
-      leftBtn.classList.remove('disabled');
+      leftBtn.classList.remove('swiper-button-disabled');
       leftBtn.disabled = false;
+      console.log('Left button enabled');
     }
 
     if (swiper.isEnd) {
-      rightBtn.classList.add('disabled');
+      rightBtn.classList.add('swiper-button-disabled');
       rightBtn.disabled = true;
+      console.log('Right button disabled');
     } else {
-      rightBtn.classList.remove('disabled');
+      rightBtn.classList.remove('swiper-button-disabled');
       rightBtn.disabled = false;
+      console.log('Right button enabled');
     }
   }
-
   fetch('https://portfolio-js.b.goit.study/api/reviews')
     .then(response => response.json())
     .then(data => {
@@ -54,10 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
         reviewsList.appendChild(reviewItem);
       });
 
-      const swiper = new Swiper('.swiper-container', {
+      swiper = new Swiper('.swiper-container', {
         navigation: {
-          nextEl: rightBtn,
-          prevEl: leftBtn,
+          nextEl: '.right-btn',
+          prevEl: '.left-btn',
         },
         keyboard: {
           enabled: true,
@@ -75,21 +87,22 @@ document.addEventListener('DOMContentLoaded', () => {
           },
         },
         on: {
-          slideChange: () => updateButtonState(swiper),
+          slideChange: updateButtonState,
+          init: updateButtonState,
         },
       });
 
-      updateButtonState(swiper);
-
       leftBtn.addEventListener('click', () => {
-        if (!leftBtn.classList.contains('disabled')) {
+        if (!leftBtn.classList.contains('swiper-button-disabled')) {
           swiper.slidePrev();
+          console.log('Left button clicked');
         }
       });
 
       rightBtn.addEventListener('click', () => {
-        if (!rightBtn.classList.contains('disabled')) {
+        if (!rightBtn.classList.contains('swiper-button-disabled')) {
           swiper.slideNext();
+          console.log('Right button clicked');
         }
       });
     })
