@@ -21,9 +21,9 @@
     />
     
     <script type="module" crossorigin src="/project-08/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-08/assets/vendor-53eccfb2.js">
-    <link rel="stylesheet" href="/project-08/assets/vendor-a44458e3.css">
-    <link rel="stylesheet" href="/project-08/assets/index-7139b84e.css">
+    <link rel="modulepreload" crossorigin href="/project-08/assets/vendor-71efa27e.js">
+    <link rel="stylesheet" href="/project-08/assets/vendor-26b1b839.css">
+    <link rel="stylesheet" href="/project-08/assets/index-af36c19d.css">
   </head>
   <body>
     <header class="header container">
@@ -151,66 +151,70 @@
           >See project</a
         >
       </div>
+      <div class="second-container">
+        <div class="swiper">
+          <ul class="projects-list swiper-wrapper">
+            <li class="projects-list-item swiper-slide">
+              <picture>
+                <source
+                  srcset="/project-08/assets/project-1-desc-03039004.png 1x, /project-08/assets/project-1-desc@2x-4bd62cad.png 2x"
+                  media="(min-width: 768px)"
+                />
 
-      <div class="projects-container second-container">
-        <ul class="projects-list">
-          <li class="projects-list-item">
-            <picture>
-              <source
-                srcset="/project-08/assets/project-1-desc-03039004.png 1x, /project-08/assets/project-1-desc@2x-4bd62cad.png 2x"
-                media="(min-width: 768px)"
-              />
+                <source
+                  srcset="/project-08/assets/project-1-mob-1e1856eb.png 1x, /project-08/assets/project-1-mob@2x-2bfce71d.png 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="../img/projects/project-1-mob.png"
+                  alt="First project"
+                />
+              </picture>
+            </li>
 
-              <source
-                srcset="/project-08/assets/project-1-mob-1e1856eb.png 1x, /project-08/assets/project-1-mob@2x-2bfce71d.png 2x"
-                media="(max-width: 767px)"
-              />
-              <img
-                src="../img/projects/project-1-mob.png"
-                alt="First project"
-              />
-            </picture>
-          </li>
-          <li class="projects-list-item visually-hidden">
-            <picture>
-              <source
-                srcset="/project-08/assets/project-2-desc-d8e8aa18.jpg 1x, /project-08/assets/project-2-desc@2x-44f43660.jpg 2x"
-                media="(min-width: 768px)"
-              />
-              <source
-                srcset="/project-08/assets/project-2-mob-c45baf13.jpg 1x, /project-08/assets/project-2-mob@2x-83e39851.jpg 2x"
-                media="(max-width: 767px)"
-              />
-              <img
-                src="/project-08/assets/project-2-mob-c45baf13.jpg"
-                alt="Second project"
-              />
-            </picture>
-          </li>
-          <li class="projects-list-item visually-hidden">
-            <picture>
-              <source
-                srcset="/project-08/assets/project-3-desc-9aa446cb.jpg 1x, /project-08/assets/project-3-desc@2x-cac531a5.jpg 2x"
-                media="(min-width: 768px)"
-              />
-              <source
-                srcset="/project-08/assets/project-3-mob-679da37d.jpg 1x, /project-08/assets/project-3-mob@2x-37b5c51e.jpg 2x"
-                media="(max-width: 767px)"
-              />
-              <img src="/project-08/assets/project-3-mob-679da37d.jpg" alt="Third project" />
-            </picture>
-          </li>
-        </ul>
+            <li class="projects-list-item swiper-slide">
+              <picture>
+                <source
+                  srcset="/project-08/assets/project-2-desc-d8e8aa18.jpg 1x, /project-08/assets/project-2-desc@2x-44f43660.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="/project-08/assets/project-2-mob-c45baf13.jpg 1x, /project-08/assets/project-2-mob@2x-83e39851.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="/project-08/assets/project-2-mob-c45baf13.jpg"
+                  alt="Second project"
+                />
+              </picture>
+            </li>
+            <li class="projects-list-item swiper-slide">
+              <picture>
+                <source
+                  srcset="/project-08/assets/project-3-desc-9aa446cb.jpg 1x, /project-08/assets/project-3-desc@2x-cac531a5.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="/project-08/assets/project-3-mob-679da37d.jpg 1x, /project-08/assets/project-3-mob@2x-37b5c51e.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="/project-08/assets/project-3-mob-679da37d.jpg"
+                  alt="Third project"
+                />
+              </picture>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-
     <div class="nav-arrows">
-      <button class="nav-arrow left-btn" disabled>
+      <button class="nav-arrow swiper-btn-left" disabled>
         <svg class="left-arrow">
           <use href="/project-08/assets/sprite-488ad49d.svg#icon-arrow-right"></use>
         </svg>
       </button>
-      <button class="nav-arrow">
+      <button class="nav-arrow swiper-btn-right">
         <svg class="right-arrow">
           <use href="/project-08/assets/sprite-488ad49d.svg#icon-arrow-right"></use>
         </svg>
