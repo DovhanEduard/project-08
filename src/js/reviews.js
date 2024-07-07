@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       rightBtn.disabled = false;
     }
   }
+
   fetch('https://portfolio-js.b.goit.study/api/reviews')
     .then(response => response.json())
     .then(data => {
@@ -47,10 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
         avatar.src = review.avatar_url;
         avatar.alt = `${review.author}'s avatar`;
 
-        const author = document.createElement('h2');
+        const author = document.createElement('h3');
         author.textContent = review.author;
 
         const reviewText = document.createElement('p');
+        reviewText.classList.add('review-text');
         reviewText.textContent = review.review;
 
         reviewCard.appendChild(avatar);
@@ -69,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
           enabled: true,
           onlyInViewport: false,
         },
-        mousewheel: true,
         slidesPerView: 1,
         spaceBetween: 16,
         breakpoints: {
