@@ -36,6 +36,8 @@
     justify-content: center;
     gap: 4px;
 
+    justify-content: center;
+    max-width: 342px;
 
     /* max-width: 342px; */
     height: 37px;
@@ -80,11 +82,8 @@
     padding: 10px;
     width: 37px;
     height: 37px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
+
 
 .social-link-yt{
     font-family: "Inter Tight", sans-serif;
@@ -99,10 +98,7 @@
     width: 37px;
     height: 37px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .social-link-gh {
     font-family: "Inter Tight", sans-serif;

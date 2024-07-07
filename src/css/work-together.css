@@ -73,21 +73,33 @@ form {
     margin-bottom: 32px;
 }
 
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+}
+
 input {
     padding: 10px 0;
     border: none;
     border-bottom: 1px solid rgba(250, 250, 250, 0.2);
     background-color: transparent;
-    color: var(--main-text);
+    color: rgba(250, 250, 250, 0.6); 
     max-width: 343px;
-    transition: border-bottom-color 0.3s ease;
+    transition: border-bottom-color 0.3s ease, color 0.3s ease;
+    width: 100%;
 }
 
 input::placeholder {
     color: rgba(250, 250, 250, 0.6);
 }
 
+input:hover,
 input:focus {
+    color: #fafafa;
     outline: none;
     border-bottom-color: rgba(250, 250, 250, 0.6);
 }
@@ -103,7 +115,21 @@ input.error {
 .input-message {
     font-size: 14px;
     margin-top: 5px;
-    height: 20px;
+    min-height: 20px; 
+    width: 100%; 
+    text-align: left;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.input-message.success,
+.input-message.error {
+    opacity: 1;
+    visibility: visible;
 }
 
 .input-message.success {
@@ -123,6 +149,13 @@ input.error {
     border-radius: 50px;
     align-self: flex-start;
     border: none;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+}
+
+    .send-btn:hover {
+    background-color: #d13139; 
 }
 
 .contact-info {
@@ -132,6 +165,7 @@ input.error {
     margin-top: 32px;
     gap: 4px;
     width: 100%;
+    justify-content: flex-start;
 }
 
 .contact-info a {
@@ -145,6 +179,50 @@ input.error {
     text-align: center;
     white-space: nowrap;
     box-sizing: border-box;
+    transition: border-color 0.3s ease;
+
+}
+
+.contact-info a:hover {
+    border: 1px solid #fafafa;
+}
+.modal {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 64px;
+    margin: auto 16px;
+    background: #1c1d20;
+    border: 1px solid rgba(250, 250, 250, 0.1); 
+    border-radius: 20px;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    text-align: center;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+}
+
+.modal-upper-text {
+    color: #fafafa;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.modal-lower-text {
+    color: rgba(250, 250, 250, 0.6);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.modal .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    background: transparent;
+    border: none;
+    color: rgba(250, 250, 250, 1);
+    font-size: 22px;
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -184,21 +262,25 @@ input.error {
         gap: 32px;
     }
 
+    .input-container {
+        width: calc(50% - 32px);
+    }
+
     input {
         max-width: 245px;
-        gap:32px;
     }
 
     .send-btn {
-        margin-top: 0;
         align-self: center;
+        min-width: 150px;
+        min-height: 150px;
+        border-radius: 50%;
+        font-size: 18px;
     }
 
-    .contact-info {
-        flex-direction: row;
+    .contact-info a {
+        padding: 18px 32px;
     }
-
-
 }
 
 @media (min-width: 1440px) {
@@ -215,23 +297,25 @@ input.error {
         font-size: 90px;
     }
 
+    .input-container {
+        display: flex;
+        gap: 32px;
+        flex: 1;
+    }
+
     input {
-        width: calc(33.33% - 20px);
-        max-width: 400px;
-        margin: 0;
+        min-width: 390px;
+        width: 100%;
     }
 
     .send-btn {
         margin-top: 0;
-        align-self: center;
-    }
-
-    .contact-info {
-        flex-direction: row;
-    }
-
-    .send-btn {
         padding: 20px;
         margin-right: 196px;
+        font-size: 20px;
     }
+}
+
+.no-scroll {
+    overflow: hidden;
 }

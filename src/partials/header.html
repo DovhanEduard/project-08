@@ -1,6 +1,6 @@
 <header class="header container">
     <div class="logo">
-        <img src="./img/logo/logo@1x.jpg" alt="Logo">
+        <img src="./img/logo/header-logo.png" alt="Logo">
         <span>jefferson*</span>
     </div>
     <nav class="desktop-nav">
@@ -8,23 +8,29 @@
             <span class="menu">Menu</span>
             <div class="dropdown">
                 <a href="#about-me">About me</a>
-                <a href="#benefits">Benefits</a>
+                <a href="#benefites">Benefits</a>
                 <a href="#projects">Projects</a>
                 <a href="#faq">FAQ</a>
             </div>
         </div>
-        <a href="#work-together" class="order-btn">Order the project</a>
     </nav>
-    <div class="burger-menu">
-        <div class="burger-icon"></div>
-    </div>
+    <a href="#work-together" class="order-btn">Order the project</a>
+    <button class="burger-menu js-open-menu" type="button">
+        <svg class="burger-icon" aria-label="open menu icon" width="28" height="28">
+            <use href="./img/icons/sprite.svg#icon-Icon"></use>
+        </svg>
+    </button>
 </header>
 
 <div class="mobile-menu">
-    <div class="close-icon"></div>
-    <a href="#about-me">About me</a>
-    <a href="#benefits">Benefits</a>
-    <a href="#projects">Projects</a>
-    <a href="#faq">FAQ</a>
-    <a href="#work-together" class="order-btn">Order the project</a>
+    <svg class="close-icon" aria-label="close menu icon" width="28" height="28">
+        <use href="./img/icons/sprite.svg#icon-x"></use>
+    </svg>
+    <div class="menu-mobile-container">
+        <a href="#about-me">About me</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#projects">Projects</a>
+        <a href="#faq">FAQ</a>
+    </div>
+    <button class="order-btn order-btn-mobile">Order the project</button>
 </div>
