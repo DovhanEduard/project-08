@@ -47,41 +47,92 @@
     border-radius: 24px;
 }
 
+.accordion {
+    .ac {
+        background-color: transparent;
+        border: none;
+    }
+
+    .ac-item {
+        padding: 20px 0 20px 0;
+        border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+    }
+
+    .ac .ac-trigger::after {
+        display: none;
+    }
+
+    .ac .ac-panel .ac-text {
+        font-family: 'Inter Tight', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: -0.02em;
+        color: #fafafa;
+    }
+
+    .ac .ac-trigger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: inherit;
+        border: 1px solid rgba(250, 250, 250, 0.2);  
+        
+    }
+
+    .icon-arrow {
+        transition: transform 0.3s ease;
+    }
+
+    .is-active .icon-arrow,
+    .faq-accordion-container .icon-arrow.active {
+        transform: rotate(180deg);
+    }
+
+    .ac-box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .list-role {
+        font-family: 'Inter Tight', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: -0.02em;
+        color: #fafafa;
+    }
+
+    .list-ed {
+        font-family: 'Inter Tight', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: -0.02em;
+        color: #fafafa;
+    }
+}
+
 .ac-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.ac-trigger {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: inherit;
-    border: 1px solid rgba(250, 250, 250, 0.2);
-}
 
-.ac-panel {
-    display: none;
-    padding: 15px 0;
-}
 
-.ac-panel-summary {
+.about-panel-summary {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
 
-.ac-item {
-    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-}
-
-.ac-item.active .ac-panel {
+.ac-item.active .about-panel {
     display: block;
-}
-
-.ac-item.active .ac-trigger {
-    transform: rotate(180deg);
 }
 
 ul.list-role li:not(:last-child) {
@@ -156,25 +207,34 @@ ul.list-ed li:not(:last-child) {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 28px;
-    height: 28px;
+    /* width: 28px;
+    height: 28px; */
     background-color: inherit;
     border: none;
-    border: 1px solid #fafafa;
+
     border-radius: 50%;
     /* stroke: rgba(250, 250, 250, 0.2); */
 }
 
 .icon-next {
-    fill: rgba(250, 250, 250, 0.2);
+    width: 28px;
+    height: 28px;
+
 }
 
 .icon-arrow {
-    border-radius: 50%;
-    border: none;
+    
+ width: 18px;
+ height: 18px;
 }
 
 @media screen and (min-width: 768px) {
+    .accordion {
+        .ac-item {
+            padding: 32px 0;
+        }
+    }
+
     .about-intro-text {
         margin-bottom: 16px;
         width: 100%;
@@ -189,10 +249,21 @@ ul.list-ed li:not(:last-child) {
         letter-spacing: -0.03em;
     }
 
-    .ac-panel-summary {
+    .about-panel-summary {
         gap: 16px;
     }
+ .accordion{
+   .ac .ac-trigger{
+        width: 40px;
+        height: 40px;
+     } 
+ }
+     
+    .icon-arrow {
 
+       width: 20px;
+       height: 20px;
+   }
     .about-swiper {
         height: 200px;
         padding: 0;
@@ -211,7 +282,7 @@ ul.list-ed li:not(:last-child) {
     .about-wrapper {
         display: flex;
         align-items: center;
-        gap: 36px;
+        gap: 24px;
     }
 
     .about-swiper {
@@ -223,7 +294,15 @@ ul.list-ed li:not(:last-child) {
 
         .button-next {
             display: inline-flex;
+            
         }
+    }
+    .button-next{
+        padding: 0;
+    }
+    .icon-next{ 
+      width: 40px;
+      height: 40px;
     }
 }
 
@@ -253,9 +332,9 @@ ul.list-ed li:not(:last-child) {
         margin-bottom: 96px;
     }
 
-    .ac-panel {
+    .about-panel {
         width: 612px;
-        height: 320px;
+        height: 100%;
         align-self: flex-end;
     }
 
@@ -265,7 +344,7 @@ ul.list-ed li:not(:last-child) {
         padding: 32px;
     }
 
-    .ac-panel-summary {
+    .about-panel-summary {
         gap: 32px;
     }
 
@@ -276,15 +355,15 @@ ul.list-ed li:not(:last-child) {
     }
 
     .button-next {
-        width: 40px;
-        height: 40px;
+         
+        margin-right: 32px;
+        
     }
 
     .about-swiper {
         display: flex;
         align-items: center;
         gap: 72px;
-
     }
 
     .about-wrapper {
