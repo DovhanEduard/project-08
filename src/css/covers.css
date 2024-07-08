@@ -99,11 +99,11 @@
         height: 960px;
     }
 }
+
 /********* DESKTOP **********/
 @media screen and (min-width: 1440px) {
     .marquee {
         background-image: url(/img/covers/desk-bg-covers.png);
-        border-radius: 50px;
         max-width: 1440px;
         overflow: hidden;
     }

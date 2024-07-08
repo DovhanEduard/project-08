@@ -71,6 +71,7 @@ form {
     align-items: flex-start;
     width: 100%;
     margin-bottom: 32px;
+    gap: 24px;
 }
 
 .input-container {
@@ -80,6 +81,7 @@ form {
     margin-bottom: 20px;
     width: 100%;
     position: relative;
+
 }
 
 input {
@@ -91,6 +93,7 @@ input {
     max-width: 343px;
     transition: border-bottom-color 0.3s ease, color 0.3s ease;
     width: 100%;
+    
 }
 
 input::placeholder {
@@ -119,7 +122,6 @@ input.error {
     width: 100%; 
     text-align: left;
     position: absolute;
-    bottom: -25px;
     left: 0;
     transition: all 0.3s ease;
     opacity: 0;
@@ -134,10 +136,12 @@ input.error {
 
 .input-message.success {
     color: var(--success);
+    bottom: -20px;
 }
 
 .input-message.error {
     color: var(--error);
+    bottom: -40px;
 }
 
 .send-btn {
