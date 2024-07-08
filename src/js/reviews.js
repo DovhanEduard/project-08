@@ -1,23 +1,30 @@
+import Swiper from 'swiper';
+import 'swiper/swiper-bundle.css';
+
 document.addEventListener('DOMContentLoaded', () => {
   const reviewsList = document.getElementById('reviews-list');
   const notFound = document.getElementById('not-found');
   const leftBtn = document.querySelector('.left-btn');
-  const rightBtn = document.querySelector('.nav-btn:not(.left-btn)');
+  const rightBtn = document.querySelector('.right-btn');
 
-  function updateButtonState(swiper) {
+  let swiper;
+
+  function updateButtonState() {
+    if (!swiper) return;
+
     if (swiper.isBeginning) {
-      leftBtn.classList.add('disabled');
+      leftBtn.classList.add('swiper-button-disabled');
       leftBtn.disabled = true;
     } else {
-      leftBtn.classList.remove('disabled');
+      leftBtn.classList.remove('swiper-button-disabled');
       leftBtn.disabled = false;
     }
 
     if (swiper.isEnd) {
-      rightBtn.classList.add('disabled');
+      rightBtn.classList.add('swiper-button-disabled');
       rightBtn.disabled = true;
     } else {
-      rightBtn.classList.remove('disabled');
+      rightBtn.classList.remove('swiper-button-disabled');
       rightBtn.disabled = false;
     }
   }
@@ -41,10 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
         avatar.src = review.avatar_url;
         avatar.alt = `${review.author}'s avatar`;
 
-        const author = document.createElement('h2');
+        const author = document.createElement('h3');
         author.textContent = review.author;
 
         const reviewText = document.createElement('p');
+        reviewText.classList.add('review-text');
         reviewText.textContent = review.review;
 
         reviewCard.appendChild(avatar);
@@ -54,18 +62,18 @@ document.addEventListener('DOMContentLoaded', () => {
         reviewsList.appendChild(reviewItem);
       });
 
-      const swiper = new Swiper('.swiper-container', {
+      swiper = new Swiper('.swiper-container', {
         navigation: {
-          nextEl: rightBtn,
-          prevEl: leftBtn,
+          nextEl: '.right-btn',
+          prevEl: '.left-btn',
         },
         keyboard: {
           enabled: true,
           onlyInViewport: false,
         },
-        mousewheel: true,
         slidesPerView: 1,
         spaceBetween: 16,
+        speed: 1000,
         breakpoints: {
           768: {
             slidesPerView: 2,
@@ -75,20 +83,19 @@ document.addEventListener('DOMContentLoaded', () => {
           },
         },
         on: {
-          slideChange: () => updateButtonState(swiper),
+          slideChange: updateButtonState,
+          init: updateButtonState,
         },
       });
 
-      updateButtonState(swiper);
-
       leftBtn.addEventListener('click', () => {
-        if (!leftBtn.classList.contains('disabled')) {
+        if (!leftBtn.classList.contains('swiper-button-disabled')) {
           swiper.slidePrev();
         }
       });
 
       rightBtn.addEventListener('click', () => {
-        if (!rightBtn.classList.contains('disabled')) {
+        if (!rightBtn.classList.contains('swiper-button-disabled')) {
           swiper.slideNext();
         }
       });

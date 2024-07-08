@@ -19,84 +19,88 @@
           >See project</a
         >
       </div>
+      <div class="second-container">
+        <div class="swiper">
+          <ul class="projects-list swiper-wrapper">
+            <li class="projects-list-item swiper-slide">
+              <picture>
+                <source
+                  srcset="
+                    ./img/projects/project-1-desc.png    1x,
+                    ./img/projects/project-1-desc@2x.png 2x
+                  "
+                  media="(min-width: 768px)"
+                />
 
-      <div class="projects-container second-container">
-        <ul class="projects-list">
-          <li class="projects-list-item">
-            <picture>
-              <source
-                srcset="
-                  ./img/projects/project-1-desc.png    1x,
-                  ./img/projects/project-1-desc@2x.png 2x
-                "
-                media="(min-width: 768px)"
-              />
+                <source
+                  srcset="
+                    ./img/projects/project-1-mob.png    1x,
+                    ./img/projects/project-1-mob@2x.png 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./img/projects/project-1-mob.png"
+                  alt="First project"
+                />
+              </picture>
+            </li>
 
-              <source
-                srcset="
-                  ./img/projects/project-1-mob.png    1x,
-                  ./img/projects/project-1-mob@2x.png 2x
-                "
-                media="(max-width: 767px)"
-              />
-              <img
-                src="../img/projects/project-1-mob.png"
-                alt="First project"
-              />
-            </picture>
-          </li>
-          <li class="projects-list-item visually-hidden">
-            <picture>
-              <source
-                srcset="
-                  ./img/projects/project-2-desc.jpg    1x,
-                  ./img/projects/project-2-desc@2x.jpg 2x
-                "
-                media="(min-width: 768px)"
-              />
-              <source
-                srcset="
-                  ./img/projects/project-2-mob.jpg    1x,
-                  ./img/projects/project-2-mob@2x.jpg 2x
-                "
-                media="(max-width: 767px)"
-              />
-              <img
-                src="./img/projects/project-2-mob.jpg"
-                alt="Second project"
-              />
-            </picture>
-          </li>
-          <li class="projects-list-item visually-hidden">
-            <picture>
-              <source
-                srcset="
-                  ./img/projects/project-3-desc.jpg    1x,
-                  ./img/projects/project-3-desc@2x.jpg 2x
-                "
-                media="(min-width: 768px)"
-              />
-              <source
-                srcset="
-                  ./img/projects/project-3-mob.jpg    1x,
-                  ./img/projects/project-3-mob@2x.jpg 2x
-                "
-                media="(max-width: 767px)"
-              />
-              <img src="./img/projects/project-3-mob.jpg" alt="Third project" />
-            </picture>
-          </li>
-        </ul>
+            <li class="projects-list-item swiper-slide">
+              <picture>
+                <source
+                  srcset="
+                    ./img/projects/project-2-desc.jpg    1x,
+                    ./img/projects/project-2-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/projects/project-2-mob.jpg    1x,
+                    ./img/projects/project-2-mob@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./img/projects/project-2-mob.jpg"
+                  alt="Second project"
+                />
+              </picture>
+            </li>
+            <li class="projects-list-item swiper-slide">
+              <picture>
+                <source
+                  srcset="
+                    ./img/projects/project-3-desc.jpg    1x,
+                    ./img/projects/project-3-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/projects/project-3-mob.jpg    1x,
+                    ./img/projects/project-3-mob@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./img/projects/project-3-mob.jpg"
+                  alt="Third project"
+                />
+              </picture>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-
     <div class="nav-arrows">
-      <button class="nav-arrow left-btn" disabled>
+      <button class="nav-arrow swiper-btn-left" disabled>
         <svg class="left-arrow">
           <use href="./img/icons/sprite.svg#icon-arrow-right"></use>
         </svg>
       </button>
-      <button class="nav-arrow">
+      <button class="nav-arrow swiper-btn-right">
         <svg class="right-arrow">
           <use href="./img/icons/sprite.svg#icon-arrow-right"></use>
         </svg>
