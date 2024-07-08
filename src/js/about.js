@@ -1,4 +1,6 @@
-// import Swiper from 'swiper';
+import Swiper from 'swiper';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+import 'swiper/css';
 
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
@@ -56,44 +58,31 @@ const initializeAccordion = () => {
 
 initializeAccordion();
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   const swiper = new Swiper('.about-swiper', {
-//     slidesPerView: 2,
-//     spaceBetween: 0,
-//     direction: 'horizontal',
-//     loop: true,
-//     navigation: {
-//       nextEl: '.about-swiper-button-next',
-//     },
-//     breakpoints: {
+new Swiper('.about-swiper', {
+  slidesPerView: 2,
+  spaceBetween: 1,
+  loop: true,
+  modules: [Navigation, Keyboard, Mousewheel],
+  navigation: {
+    prevEl: '.button-next',
+  },
+  keyboard: {
+    enabled: false,
+    onlyInViewport: false,
+  },
+  mousewheel: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      width: 600,
+      loop: true,
+    },
+    1440: {
+      slidesPerView: 6,
+      width: 1200,
+      loop: false,
+    },
+  },
 
-//       320: {
-//         slidesPerView: 2,
-//         spaceBetween: 0,
-//       },
-
-//       768: {
-//         slidesPerView: 3,
-//         spaceBetween: 0,
-//       },
-
-//       1440: {
-//         slidesPerView: 6,
-//         spaceBetween: 0,
-//       }
-//     }
-//   });
-
-//   const slides = document.querySelectorAll('.about-swiper-slide');
-//   slides.forEach(slide => slide.classList.add('visually-hidden'));
-//   slides[0].classList.remove('visually-hidden');
-//   slides[0].classList.add('is-active');
-
-//   document.querySelector('.about-swiper-button-next').addEventListener('click', () => {
-//     slides.forEach(slide => slide.classList.add('visually-hidden'));
-//     const activeSlide = document.querySelector('.about-swiper-slide.swiper-slide-active');
-//     activeSlide.classList.remove('visually-hidden');
-//     activeSlide.classList.add('is-active');
-//   });
-
-// });
+  
+});
