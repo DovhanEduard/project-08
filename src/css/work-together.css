@@ -21,8 +21,9 @@
     color: var(--main-text);
     border-radius: 24px;
     overflow: hidden;
-    background-image: url('./img/work-together/Glasseffect.png'); 
-    background-position: center right 582%;
+    background-size: auto;
+    background-image: url('../img/work-together/Glasseffect.png'); 
+    background-position: center right 560%;
     background-repeat: no-repeat;
     /* background-blend-mode: screen;  */
 }
@@ -239,7 +240,7 @@ input.error {
     }
 
     .work-together {
-        background-position: center right -82%;
+        background-position: center right -79%;
     }
 
     .footer-title {
@@ -302,7 +303,7 @@ input.error {
 
     .work-together {
         padding: 196px 80px;
-        background-position: center right 4%;
+        background-position: center right 6%;
     }
 
     .line1 h1,
