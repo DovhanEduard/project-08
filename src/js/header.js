@@ -58,3 +58,10 @@ orderBtnMobile.addEventListener('click', function(event) {
         targetElement.scrollIntoView({ behavior: 'smooth' });
     }
 });
+
+// Закриття мобільного меню при зміні розміру вікна
+window.addEventListener('resize', function() {
+    if (window.innerWidth >= 768) {
+        mobileMenu.style.display = 'none';
+    }
+});
