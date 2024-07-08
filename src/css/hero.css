@@ -205,6 +205,15 @@
 }
 
 .container-hero{
+    background-image: url(/img/hero/bc-hero-tab@1x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     padding-top: 300px;
 
     min-width: 768px;
@@ -220,7 +229,7 @@
 .contact{
     display: flex;
     justify-content: flex-end;
-    gap: 4px;
+    gap: 8px;
     /* margin-left: auto; */
 
     /* max-width: 473px; */
@@ -228,9 +237,9 @@
     height: 55px;
 }
 
-.social-links{
+/* .social-links{
     gap: 8px;
-}
+} */
 
 /* .social-link{
     padding: 18px 16px;
@@ -309,7 +318,7 @@
     height: 55px;
 }
     
-.container-hero{
+/* .container-hero{
     background-image: url(/img/hero/bc-hero-tab@1x.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -318,7 +327,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+} */
 
 }
 
