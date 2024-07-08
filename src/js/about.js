@@ -84,5 +84,9 @@ new Swiper('.about-swiper', {
     },
   },
 
-  
+  // on: {
+  //   slideChange: function () {
+  //    // updateArrowState(this);
+  //   },
+  // },
 });
