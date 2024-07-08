@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const leftBtn = document.querySelector('.swiper-btn-left');
   const rightBtn = document.querySelector('.swiper-btn-right');
 
-  const swiper = new Swiper('.swiper', {
+  new Swiper('.swiper', {
     slidesPerView: 1,
     spaceBetween: 16,
     modules: [Navigation, Keyboard, Mousewheel],
@@ -23,33 +23,19 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     mousewheel: true,
 
-    on: {
-      slideChange: function () {
-        updateArrowState(this);
-      },
-    },
+    // on: {
+    //   slideChange: function () {
+    //    // updateArrowState(this);
+    //   },
+    // },
   });
 
-  leftBtn.addEventListener('click', () => {
-    swiper.slidePrev();
-  });
+  //
 
-  rightBtn.addEventListener('click', () => {
-    swiper.slideNext();
-  });
+  // function updateArrowState(swiper) {
+  //   leftBtn.disabled = swiper.isBeginning;
+  //   rightBtn.disabled = swiper.isEnd;
+  // }
 
-  // rightBtn.addEventListener('click', () => {
-  //   if (swiper.activeIndex === 0) {
-  //     swiper.slideTo(1);
-  //   } else {
-  //     swiper.slideNext();
-  //   }
-  // });
-
-  function updateArrowState(swiper) {
-    leftBtn.disabled = swiper.isBeginning;
-    rightBtn.disabled = swiper.isEnd;
-  }
-
-  updateArrowState(swiper);
+  // updateArrowState(swiper);
 });
