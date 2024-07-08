@@ -19,7 +19,7 @@
 }
 
 .benefites-list-item {
-  width: 344px;
+  max-width: 344px;
   padding: 24px;
   border-radius: 20px;
   background-color: var(--cards);
