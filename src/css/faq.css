@@ -15,7 +15,8 @@
   .ac .ac-panel .ac-text {
     font-size: 16px;
     margin-top: 16px;
-    color: white;
+    color: rgba(250, 250, 250, 0.6);
+    padding: 0px;
   }
   .ac {
     border: none;
@@ -100,9 +101,11 @@
   .faq-list-title {
     max-width: 485px;
   }
-  .faq-list-title:first-child {
-    max-width: 574px;
+
+  .faq-list-item:first-of-type .faq-list-title {
+    width: 574px;
   }
+
   .ac-text {
     max-width: 656px;
   }
@@ -129,6 +132,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .faq-list-title {
+    max-width: 485px;
+  }
+
+  .faq-list-item:first-of-type .faq-list-title {
+    width: 574px;
   }
 
   .faq-list-item {
