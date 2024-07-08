@@ -61,12 +61,12 @@
     border: 1px solid rgba(250, 250, 250, 0.2);
 }
 
-.ac-panel {
+.about-panel {
     display: none;
     padding: 15px 0;
 }
 
-.ac-panel-summary {
+.about-panel-summary {
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -76,7 +76,7 @@
     border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
 
-.ac-item.active .ac-panel {
+.ac-item.active .about-panel {
     display: block;
 }
 
@@ -189,7 +189,7 @@ ul.list-ed li:not(:last-child) {
         letter-spacing: -0.03em;
     }
 
-    .ac-panel-summary {
+    .about-panel-summary {
         gap: 16px;
     }
 
@@ -253,9 +253,9 @@ ul.list-ed li:not(:last-child) {
         margin-bottom: 96px;
     }
 
-    .ac-panel {
+    .about-panel {
         width: 612px;
-        height: 320px;
+        height: 100%;
         align-self: flex-end;
     }
 
@@ -265,7 +265,7 @@ ul.list-ed li:not(:last-child) {
         padding: 32px;
     }
 
-    .ac-panel-summary {
+    .about-panel-summary {
         gap: 32px;
     }
 

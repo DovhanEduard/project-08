@@ -22,7 +22,7 @@ const initializeAccordion = () => {
   const firstItem = document.querySelector('.accordion-container .ac-item');
   if (firstItem) {
     firstItem.classList.add('active');
-    const firstPanel = firstItem.querySelector('.ac-panel');
+    const firstPanel = firstItem.querySelector('.about-panel');
     if (firstPanel) {
       firstPanel.style.display = 'block';
     }
@@ -36,10 +36,10 @@ const initializeAccordion = () => {
 
         if (parentItem.classList.contains('active')) {
           parentItem.classList.remove('active');
-          parentItem.querySelector('.ac-panel').style.display = 'none';
+          parentItem.querySelector('.about-panel').style.display = 'none';
         } else {
           parentItem.classList.add('active');
-          parentItem.querySelector('.ac-panel').style.display = 'block';
+          parentItem.querySelector('.about-panel').style.display = 'block';
         }
 
         if (!accordionSettings.showMultiple) {
@@ -48,7 +48,7 @@ const initializeAccordion = () => {
             .forEach(item => {
               if (item !== parentItem && item.classList.contains('active')) {
                 item.classList.remove('active');
-                item.querySelector('.ac-panel').style.display = 'none';
+                item.querySelector('.about-panel').style.display = 'none';
               }
             });
         }

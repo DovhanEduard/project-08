@@ -5,23 +5,52 @@
   margin-bottom: 32px;
 }
 
-.accordion-container .ac {
+.faq-accordion-container {
+  .ac .ac-trigger::after {
+    display: none;
+  }
+  .ac.is-active .ac-panel {
+    visibility: visible;
+  }
+  .ac .ac-panel .ac-text {
+    font-size: 16px;
+    margin-top: 16px;
+    color: rgba(250, 250, 250, 0.6);
+  }
+  .ac {
+    border: none;
+  }
+  .ac .ac-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 100px;
+    cursor: pointer;
+    padding: 7px;
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.faq-accordion-container .ac {
   border-top: 1px solid rgba(250, 250, 250, 0.2);
   background-color: inherit;
   margin: 0;
 }
 
-.accordion-container .ac:last-child {
+.faq-accordion-container .ac:last-child {
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
 
-.accordion-container .ac-header {
+.faq-accordion-container .ac-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.accordion-container .ac-trigger {
+.faq-accordion-container .ac-trigger {
   background: transparent;
   border: none;
   padding: 0;
@@ -29,43 +58,25 @@
   text-align: left;
 }
 
-.accordion-container .faq-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 100px;
-  cursor: pointer;
-  padding: 7px;
-  width: 34px;
-  height: 34px;
-}
-
-.accordion-container .faq-icon {
+.faq-accordion-container .faq-icon {
   width: 24px;
   height: 24px;
   transition: transform 0.3s ease;
 }
 
-.accordion-container .is-active .faq-icon,
-.accordion-container .faq-icon.active {
+.faq-accordion-container .is-active .faq-icon,
+.faq-accordion-container .faq-icon.active {
   transform: rotate(180deg);
 }
 
-.accordion-container .faq-list-title {
+.faq-accordion-container .faq-list-title {
   font-weight: 600;
   font-size: 20px;
   color: #fafafa;
 }
 
-.accordion-container .ac-panel {
+.faq-accordion-container .ac-panel {
   overflow: hidden;
-}
-
-.accordion-container .ac-text {
-  font-size: 16px;
-  margin-top: 16px;
 }
 
 /* Мобільна версія (за замовчуванням) */
