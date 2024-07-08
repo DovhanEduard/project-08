@@ -60,7 +60,6 @@
 
   .benefites-list-item {
     width: calc((100% - 16px) / 2);
-    margin: 0;
   }
 
   .benefites-btn {
