@@ -35,7 +35,7 @@
 .benefites-description {
   line-height: 150%;
   color: rgba(250, 250, 250, 0.6);
-  width: 284px;
+  max-width: 284px;
 }
 
 .benefites-btn {
