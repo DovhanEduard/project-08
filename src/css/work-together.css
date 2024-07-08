@@ -22,7 +22,7 @@
     border-radius: 24px;
     overflow: hidden;
     background-size: auto;
-    background-image: url('../img/work-together/Glasseffect.png'); 
+    background-image: url('./img/work-together/Glasseffect.png'); 
     background-position: center right 560%;
     background-repeat: no-repeat;
     /* background-blend-mode: screen;  */
