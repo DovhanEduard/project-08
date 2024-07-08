@@ -33,14 +33,6 @@
     
 }
 
-.section.about-me-section {
-    padding-top: 0;
-    padding-bottom: 0;
-    
-}
-
-
-
 
 .about-intro-img{
     width: 100%;
@@ -95,15 +87,39 @@ ul.list-ed li:not(:last-child) {
     margin-bottom: 10px;
 }
 
+.icon-arrow{
+    border-radius: 50%;
+    border: none;
 
-.about-swiper{
-    width: 100%;
-    height: 130px;
-    padding: 20px 0;
-    
+}
+
+.about-wrapper {
+    position: relative;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+.about-swiper.swiper-container{
+    padding: 0;
+    display: flex;
+    align-items: center;  
+}
+
+.swiper-wrapper{
+    display: flex;
+    align-items: center;
+    max-width: 0;
+
 }
 
 .about-swiper-slide{
+     max-width: 130px;
+     margin: 0;
+}
+
+
+.swiper-slide-title{
     width: 130px;
     height: 130px;
     border-radius: 50%;
@@ -112,44 +128,46 @@ ul.list-ed li:not(:last-child) {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-}
-
-.about-swiper-slide.is-active {
-    background-color: #ED3B44;
-    border: none;
-}
-
-.swiper-slide-title{
     color: #FAFAFA;
     text-align: center;
 }
 
-.about-swiper-wrapper{
-    display: flex;
-    align-items: center;
-
+.swiper-slide-title.is-active {
+    background-color: #ED3B44;
+    border: none;
 }
 
-.about-swiper-button-next {
-    /* color: #FAFAFA; */
+
+.button-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    position: absolute;
+} 
+
+
+.icon-next{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
     width: 28px;
     height: 28px;
     background-color: inherit;
     border: none;
-    /* stroke: rgba(250, 250, 250, 0.2); */
-} 
-
-.icon-next{
     fill: rgba(250, 250, 250, 0.2);
 
 }
 
-.icon-arrow{
-    border-radius: 50%;
-    border: none;
 
-}
 
 
 
@@ -173,17 +191,14 @@ ul.list-ed li:not(:last-child) {
         gap: 16px;
     }
 
-    .about-swiper {
-         width: 100%;
-         height: 200px;
-         padding: 0;
     
-    }
 
     .about-swiper-slide{
-    width: 200px;
-    height: 200px;
-    
+    max-width: 200px;
+    }
+    .swiper-slide-title {
+        width: 200px;
+        height: 200px;
     }
 }
 
@@ -234,7 +249,7 @@ ul.list-ed li:not(:last-child) {
         gap: 32px;
     }
 
-    .about-swiper {
+    .about-swiper.swiper-container {
          width: 100%;
          height: 200px;
          padding: 0;
@@ -248,7 +263,7 @@ ul.list-ed li:not(:last-child) {
     }
 
 
-    .about-swiper-button-next {
+    .button-next {
     
     width: 40px;
     height: 40px;

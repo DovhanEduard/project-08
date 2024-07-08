@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import 'swiper/css';
 
 
 import Accordion from 'accordion-js';
@@ -6,7 +7,7 @@ import 'accordion-js/dist/accordion.min.css';
 
 const accordionSettings = {
   duration: 400,
-  showMultiple: false,
+  showMultiple: true,
   onOpen: function(currentElement) {
     console.log(currentElement);
   }
@@ -52,55 +53,63 @@ const initializeAccordion = () => {
 
 initializeAccordion();
 
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
-  const swiper = new Swiper('.about-swiper', {
-    slidesPerView: 2,
-    spaceBetween: 0,
-    direction: 'horizontal',
-    loop: true,
+  const rightBtn = document.querySelector('.button-next');
+  const swiperAbout = new Swiper('.about-swiper', {
     navigation: {
-      nextEl: '.about-swiper-button-next',
+      nextEl: '.button-next'
+    
     },
+    
+    simulateTouch: true,
+    grabCursor: true,
+    slideToClickedSlide: true,
+
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true
+    },
+
+    mousewheel: {
+      sensitivity: 1,
+      eventsTarget: '.about-swiper'
+    },
+
+    autoHeight: true,
+
+    slidesPerView: 2,
+
+    spaceBetween: 0,
+
+    slidesPerGroup: 1,
+
+    initialSlide: 0,
+
+    slidesPerColumn: 1,
+
+    loop: true,
+
     breakpoints: {
-        
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 0,
-      },
-       
+      
       768: {
         slidesPerView: 3,
-        spaceBetween: 0,
       },
-
       1440: {
         slidesPerView: 6,
-        spaceBetween: 0,
-      }
+      },
+
     }
+
   });
 
-   
-  const slides = document.querySelectorAll('.about-swiper-slide');
-  slides.forEach(slide => slide.classList.add('visually-hidden'));
-  slides[0].classList.remove('visually-hidden');
-  slides[0].classList.add('is-active');
-
-   
-  document.querySelector('.about-swiper-button-next').addEventListener('click', () => {
-    slides.forEach(slide => slide.classList.add('visually-hidden'));
-    const activeSlide = document.querySelector('.about-swiper-slide.swiper-slide-active');
-    activeSlide.classList.remove('visually-hidden');
-    activeSlide.classList.add('is-active');
+  rightBtn.addEventListener('click', () => {
+    swiperAbout.slideNext();
   });
-  
 });
+
+
+
 
 
 
