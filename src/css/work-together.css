@@ -21,6 +21,10 @@
     color: var(--main-text);
     border-radius: 24px;
     overflow: hidden;
+    background-image: url('./img/work-together/Glasseffect.png'); 
+    background-position: center right 582%;
+    background-repeat: no-repeat;
+    /* background-blend-mode: screen;  */
 }
 
 .footer-title {
@@ -234,6 +238,10 @@ input.error {
         max-width: 728px;
     }
 
+    .work-together {
+        background-position: center right -82%;
+    }
+
     .footer-title {
         flex-direction: row;
         align-items: center;
@@ -294,6 +302,7 @@ input.error {
 
     .work-together {
         padding: 196px 80px;
+        background-position: center right 4%;
     }
 
     .line1 h1,
