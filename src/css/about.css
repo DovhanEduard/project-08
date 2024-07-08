@@ -1,4 +1,4 @@
-.container.about-me-container{
+.container.about-me-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,24 +17,26 @@
 
 .intro-text {
     text-transform: uppercase;
-    color: #FAFAFA;
+    color: #fafafa;
     height: 196px;
     text-align: left;
     padding: 0px 0px;
 }
 
 .highlight-red {
-    color: #ED3B44;
-    
+    color: #ed3b44;
 }
 
 .highlight-grey {
     color: rgba(250, 250, 250, 0.4);
-    
 }
 
+.section.about-me-section {
+    padding-top: 0;
+    padding-bottom: 0;
+}
 
-.about-intro-img{
+.about-intro-img {
     width: 100%;
     border-radius: 24px;
 }
@@ -43,7 +45,6 @@
     width: 100%;
     height: auto;
     border-radius: 24px;
-
 }
 
 .ac-box {
@@ -52,7 +53,7 @@
     align-items: center;
 }
 
-.ac-trigger{
+.ac-trigger {
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -60,26 +61,30 @@
     border: 1px solid rgba(250, 250, 250, 0.2);
 }
 
-.ac-panel{
+.ac-panel {
     display: none;
     padding: 15px 0;
 }
 
-.ac-panel-summary{
+.ac-panel-summary {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
-.ac-item{
+
+.ac-item {
     border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
+
 .ac-item.active .ac-panel {
     display: block;
 }
+
 .ac-item.active .ac-trigger {
     transform: rotate(180deg);
 }
-ul.list-role li:not(:last-child){
+
+ul.list-role li:not(:last-child) {
     margin-bottom: 10px;
 }
 
@@ -87,124 +92,143 @@ ul.list-ed li:not(:last-child) {
     margin-bottom: 10px;
 }
 
-.icon-arrow{
-    border-radius: 50%;
-    border: none;
+.about-swiper {
+    width: 100%;
+    height: 130px;
+}
 
+.about-swiper-wrapper {
+    .about-swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 130px;
+        border-radius: 50%;
+        background-color: inherit;
+        border: 1px solid rgba(250, 250, 250, 0.4);
+    }
+}
+
+.container.accordion-container {
+    margin-bottom: 32px;
 }
 
 .about-wrapper {
-    position: relative;
-}
-
-.wrapper {
-    min-height: 100%;
-}
-.about-swiper.swiper-container{
-    padding: 0;
-    display: flex;
-    align-items: center;  
-}
-
-.swiper-wrapper{
     display: flex;
     align-items: center;
-    max-width: 0;
-
+    gap: 55px;
 }
 
-.about-swiper-slide{
-     max-width: 130px;
-     margin: 0;
+.about-swiper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 260px;
+
+    .button-next {
+        display: inline-flex;
+    }
 }
 
+.about-swiper-wrapper {
+    .accent-color {
+        background-color: #ed3b44;
+        border: none;
+    }
+}
 
-.swiper-slide-title{
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    background-color: inherit;
-    border: 1px solid rgba(250, 250, 250, 0.4);
+.swiper-slide-title {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FAFAFA;
+    color: #fafafa;
     text-align: center;
 }
 
-.swiper-slide-title.is-active {
-    background-color: #ED3B44;
-    border: none;
+.about-swiper-wrapper {
+    display: flex;
+    align-items: center;
 }
 
-
 .button-next {
+    /* color: #FAFAFA; */
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    background: none;
-    border: none;
-    position: absolute;
-} 
-
-
-.icon-next{
-    display: flex;
     align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
     width: 28px;
     height: 28px;
     background-color: inherit;
     border: none;
-    fill: rgba(250, 250, 250, 0.2);
-
+    border: 1px solid #fafafa;
+    border-radius: 50%;
+    /* stroke: rgba(250, 250, 250, 0.2); */
 }
 
+.icon-next {
+    fill: rgba(250, 250, 250, 0.2);
+}
 
+.icon-arrow {
+    border-radius: 50%;
+    border: none;
+}
 
-
-
-
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     .about-intro-text {
         margin-bottom: 16px;
         width: 100%;
         height: 700px;
         padding: 64px;
     }
+
     .intro-text {
-       font-size: 38px;
-       width: 576px;
-       line-height: 0.95;
-       letter-spacing: -0.03em;
-       
+        font-size: 38px;
+        width: 576px;
+        line-height: 0.95;
+        letter-spacing: -0.03em;
     }
+
     .ac-panel-summary {
-            
         gap: 16px;
     }
 
-    
-
-    .about-swiper-slide{
-    max-width: 200px;
-    }
-    .swiper-slide-title {
-        width: 200px;
+    .about-swiper {
         height: 200px;
+        padding: 0;
+    }
+
+    .container.accordion-container {
+        margin-bottom: 64px;
+    }
+
+    .about-swiper-wrapper {
+        .about-swiper-slide {
+            height: 200px;
+        }
+    }
+
+    .about-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+    }
+
+    .about-swiper {
+        display: flex;
+        justify-content: 64px;
+        align-items: center;
+        overflow: hidden;
+        width: 600px;
+
+        .button-next {
+            display: inline-flex;
+        }
     }
 }
 
 @media screen and (min-width: 1440px) {
     .container.about-me-container {
-            
         flex-direction: row;
         gap: 16px;
         align-items: start;
@@ -212,61 +236,60 @@ ul.list-ed li:not(:last-child) {
     }
 
     .about-intro-img {
-       height: 700px;    
-     }
-    
-    .about-me-img {
-            width: 680px;
-            height: 100%;
-            
-    
+        height: 700px;
     }
-    
+
+    .about-me-img {
+        width: 680px;
+        height: 100%;
+    }
+
     .about-intro-text {
         width: 680px;
         height: 700px;
     }
 
-    .container.accordion-container{
+    .container.accordion-container {
         margin-bottom: 96px;
     }
 
-    .ac-panel{
+    .ac-panel {
         width: 612px;
         height: 320px;
         align-self: flex-end;
     }
 
-    .ac-item{
+    .ac-item {
         display: flex;
         flex-direction: column;
         padding: 32px;
-    
     }
 
     .ac-panel-summary {
-    
         gap: 32px;
     }
 
-    .about-swiper.swiper-container {
-         width: 100%;
-         height: 200px;
-         padding: 0;
-    
+    .about-swiper {
+        width: 100%;
+        height: 200px;
+        padding: 0;
     }
-
-    .about-swiper-slide{
-    width: 200px;
-    height: 200px;
-    
-    }
-
 
     .button-next {
-    
-    width: 40px;
-    height: 40px;
-    
-    } 
+        width: 40px;
+        height: 40px;
+    }
+
+    .about-swiper {
+        display: flex;
+        align-items: center;
+        gap: 72px;
+
+    }
+
+    .about-wrapper {
+        .button-next {
+            display: inline-flex;
+        }
+    }
 }
