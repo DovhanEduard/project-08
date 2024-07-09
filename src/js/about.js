@@ -6,13 +6,14 @@ import 'accordion-js/dist/accordion.min.css';
 
 new Accordion('.accordion', {
   duration: 600,
-  showMultiple: true, 
+  showMultiple: true,
   openOnInit: [0],
 });
 
 new Swiper('.about-swiper', {
   slidesPerView: 2,
   spaceBetween: 1,
+  speed: 1000,
   allowSlidePrev: false,
   loop: true,
   modules: [Navigation, Keyboard, Mousewheel],

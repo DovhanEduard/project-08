@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   new Swiper('.swiper', {
     slidesPerView: 1,
     spaceBetween: 16,
+    speed: 1000,
     modules: [Navigation, Keyboard, Mousewheel],
     navigation: {
       nextEl: rightBtn,
