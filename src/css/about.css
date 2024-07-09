@@ -292,7 +292,6 @@ ul.list-ed li:not(:last-child) {
 
   .about-swiper {
     display: flex;
-    justify-content: 64px;
     align-items: center;
     overflow: hidden;
     width: 600px;
