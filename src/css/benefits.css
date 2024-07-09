@@ -54,12 +54,12 @@
     flex-wrap: wrap;
     flex-direction: row;
     gap: 16px;
-    width: 704px;
+    max-width: 704px;
     height: 556px;
   }
 
   .benefites-list-item {
-    width: calc((100% - 16px) / 2);
+    max-width: calc((100% - 16px) / 2);
   }
 
   .benefites-btn {
@@ -75,7 +75,7 @@
   }
   .benefites-list {
     margin-left: auto;
-    width: 680px;
+    max-width: 680px;
     height: 556px;
   }
 
