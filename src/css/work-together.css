@@ -15,12 +15,17 @@
 .work-together {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 32px 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     background-color: var(--background);
     color: var(--main-text);
     border-radius: 24px;
     overflow: hidden;
+    background-size: auto;
+    background-image: url(/img/work-together/Glasseffect.png); 
+    background-position: center right 560%;
+    background-repeat: no-repeat;
+    /* background-blend-mode: screen;  */
 }
 
 .footer-title {
@@ -164,11 +169,12 @@ input.error {
 
 .contact-info {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     margin-top: 32px;
     gap: 4px;
-    width: 100%;
+    max-width: 100%;
     justify-content: flex-start;
 }
 
@@ -182,9 +188,7 @@ input.error {
     text-decoration: none;
     text-align: center;
     white-space: nowrap;
-    box-sizing: border-box;
     transition: border-color 0.3s ease;
-
 }
 
 .contact-info a:hover {
@@ -234,6 +238,10 @@ input.error {
         max-width: 728px;
     }
 
+    .work-together {
+        background-position: center right -79%;
+    }
+
     .footer-title {
         flex-direction: row;
         align-items: center;
@@ -281,9 +289,13 @@ input.error {
         border-radius: 50%;
         font-size: 18px;
     }
-
+    .contact-info { 
+        gap: 8px;
+    }
+    
     .contact-info a {
         padding: 18px 32px;
+        font-size: 16px;
     }
 }
 
@@ -294,6 +306,7 @@ input.error {
 
     .work-together {
         padding: 196px 80px;
+        background-position: center right 6%;
     }
 
     .line1 h1,

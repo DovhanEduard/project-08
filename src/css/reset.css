@@ -37,13 +37,3 @@ img {
 address {
   font-style: normal;
 }
-
-@media only screen and (min-width:768px) {
-  button.burger-menu {
-    display: none;
-  }
-
-  .mobile-menu {
-    display: none;
-  }
-}
