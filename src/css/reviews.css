@@ -92,8 +92,13 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
-.left-arrow {
-  transform: rotate(180deg);
+.nav-btn {
+  .left-arrow {
+    transform: rotate(180deg);
+  }
+  .right-arrow {
+    transform: rotate(360deg);
+  }
 }
 
 .nav-btn:disabled {

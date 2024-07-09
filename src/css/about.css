@@ -216,6 +216,13 @@ ul.list-ed li:not(:last-child) {
 .icon-next {
   width: 28px;
   height: 28px;
+  stroke: #fafafa;
+  fill: none;
+
+  transform: rotate(180deg);
+}
+.button-next:disabled .icon-next {
+  stroke: #3b3b3b;
 }
 
 .icon-arrow {
@@ -251,6 +258,10 @@ ul.list-ed li:not(:last-child) {
     .ac .ac-trigger {
       width: 40px;
       height: 40px;
+    }
+    .ac .ac-trigger:hover,
+    .ac .ac-trigger:focus {
+      background: rgba(255, 255, 255, 0.1);
     }
   }
 
