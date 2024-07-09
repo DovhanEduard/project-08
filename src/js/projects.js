@@ -23,20 +23,5 @@ document.addEventListener('DOMContentLoaded', () => {
       onlyInViewport: false,
     },
     mousewheel: true,
-
-    // on: {
-    //   slideChange: function () {
-    //    // updateArrowState(this);
-    //   },
-    // },
   });
-
-  //
-
-  // function updateArrowState(swiper) {
-  //   leftBtn.disabled = swiper.isBeginning;
-  //   rightBtn.disabled = swiper.isEnd;
-  // }
-
-  // updateArrowState(swiper);
 });
