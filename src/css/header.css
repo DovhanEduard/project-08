@@ -1,9 +1,8 @@
-/* Загальні стилі для header */
 .header {
     position: absolute;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 32px 16px;
     background-color: transparent;
     top: 0;
@@ -19,6 +18,7 @@
 .logo {
     display: flex;
     align-items: center;
+    margin-bottom: 0px;
 }
 
 /* Стилі для зображення логотипу */
@@ -37,82 +37,8 @@
     align-self: flex-start;
 }
 
-/* Стилі для навігації */
 .desktop-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-/* Стилі для меню */
-.menu-container {
-    position: relative;
-}
-
-.menu {
-    display: block;
-    padding: 10px;
-    width: auto;
-    height: 39px;
-    font-size: 16px;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    color: #fafafa;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 8px;
-    cursor: pointer;
-}
-
-/* Стилі для випадаючого списку */
-.dropdown {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-    background-color: transparent;
-    border: none;
-}
-
-.dropdown a {
-    cursor: pointer;
-    min-width: 67px;
-    height: auto;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    color: #fafafa;
-    display: block;
-    padding-bottom: 5px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.dropdown a:hover,
-.dropdown a:focus {
-    font-size: 16px;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    color: #ed3b44;
-    cursor: pointer;
-}
-
-/* Показ випадаючого списку при додаванні класу 'show' */
-.dropdown.show {
-    display: block;
-}
-
-/* Стилі для кнопки "Order the project" в хедері */
-.order-btn {
-    border-radius: 60px;
-    padding: 18px 24px;
-    width: auto;
-    height: 55px;
-    background: #ed3b44;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    color: #fafafa;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-btn {
@@ -120,133 +46,92 @@
 }
 
 .burger-menu {
-    display: none;
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
-.order-btn:hover {
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/hero/bc-hero-mob@1x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.menu-mobile-container {
+    display: flex;
+    /* Додаємо flex display */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    /* Дозволяємо контейнеру зайняти доступний простір */
+}
+
+.mobile-menu a {
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fafafa;
+    margin-bottom: 12px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a:focus {
+    color: #ed3b44;
+
+}
+
+.close-icon {
+    position: absolute;
+    top: 32px;
+    right: 16px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.order-btn-mobile {
+    display: block;
+    border-radius: 60px;
+    padding: 14px 31px;
+    width: auto;
+    height: 45px;
+    background-color: #ed3b44;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+    margin-top: auto;
+    border: none;
+    margin-bottom: 64px;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-btn-mobile:hover {
     background-color: #e0373f;
 }
 
-/* Додаткові стилі для посилань і елементів навігації */
-.desktop-nav a,
-.desktop-nav .menu {
-    font-size: 16px;
-    text-decoration-skip-ink: none;
-    color: #fafafa;
-}
-
-/* Медиа-запит для показу навігації тільки на планшетних та десктопних пристроях */
-@media only screen and (max-width: 768px) {
-    .desktop-nav {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .mobile-menu {
-        display: none;
-    }
-}
-
-/* Медиа-запит для мобільного меню */
-@media only screen and (max-width: 767px) {
-    .header {
-        align-items: flex-start;
-    }
-
-    .logo {
-        margin-bottom: 0px;
-    }
-
-    .desktop-nav {
-        display: none;
-    }
-
-    .burger-menu {
-        display: block;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-    }
-
-    .mobile-menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url(/img/hero/bc-hero-mob@1x.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-    }
-
-    .menu-mobile-container {
-        display: flex;
-        /* Додаємо flex display */
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        flex-grow: 1;
-        /* Дозволяємо контейнеру зайняти доступний простір */
-    }
-
-    .mobile-menu a {
-        font-size: 16px;
-        letter-spacing: -0.02em;
-        text-decoration: underline;
-        text-decoration-skip-ink: none;
-        color: #fafafa;
-        margin-bottom: 12px;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        cursor: pointer;
-    }
-
-    .mobile-menu a:hover,
-    .mobile-menu a:focus {
-        color: #ed3b44;
-    }
-
-    .close-icon {
-        position: absolute;
-        top: 32px;
-        right: 16px;
-        width: 28px;
-        height: 28px;
-        cursor: pointer;
-    }
-
-    .order-btn-mobile {
-        display: block;
-        border-radius: 60px;
-        padding: 14px 31px;
-        width: auto;
-        height: 45px;
-        background-color: #ed3b44;
-        font-size: 14px;
-        letter-spacing: -0.02em;
-        color: #fafafa;
-        margin-top: auto;
-        border: none;
-        margin-bottom: 64px;
-        cursor: pointer;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .order-btn-mobile:hover {
-        background-color: #e0373f;
-    }
-}
 
 html {
     scroll-behavior: smooth;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width:768px) {
     button.burger-menu {
         display: none;
     }
@@ -255,11 +140,94 @@ html {
         display: none;
     }
 
-    .order-btn {
+    .desktop-nav {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
-    .burger-menu {
+    /* Стилі для меню */
+    .menu-container {
+        position: relative;
+    }
+
+    .menu {
         display: block;
+        padding: 10px;
+        width: auto;
+        height: 39px;
+        font-size: 16px;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: #fafafa;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+
+    /* Стилі для випадаючого списку */
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        background-color: transparent;
+        border: none;
+    }
+
+    .dropdown a {
+        cursor: pointer;
+        min-width: 67px;
+        height: auto;
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        color: #fafafa;
+        display: block;
+        padding-bottom: 5px;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .dropdown a:hover,
+    .dropdown a:focus {
+        font-size: 16px;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: #ed3b44;
+        cursor: pointer;
+    }
+
+    /* Показ випадаючого списку при додаванні класу 'show' */
+    .dropdown.show {
+        display: block;
+    }
+
+    /* Стилі для кнопки "Order the project" в хедері */
+    .order-btn {
+        display: block;
+        border-radius: 60px;
+        padding: 18px 24px;
+        width: auto;
+        height: auto;
+        background: #ed3b44;
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        color: #fafafa;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    }
+
+    .order-btn:hover {
+        background-color: #e0373f;
+    }
+
+    /* Додаткові стилі для посилань і елементів навігації */
+    .desktop-nav a,
+    .desktop-nav .menu {
+        font-size: 16px;
+        text-decoration-skip-ink: none;
+        color: #fafafa;
     }
 }
