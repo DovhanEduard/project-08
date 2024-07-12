@@ -126,6 +126,10 @@
     background-color: #e0373f;
 }
 
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}
 
 html {
     scroll-behavior: smooth;

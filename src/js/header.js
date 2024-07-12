@@ -15,7 +15,7 @@ dropdown.querySelectorAll('a').forEach(function(link) {
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
             event.preventDefault();
-            targetElement.scrollIntoView({ behavior: 'smooth' });
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
@@ -24,24 +24,28 @@ dropdown.querySelectorAll('a').forEach(function(link) {
 const burgerMenu = document.querySelector('.burger-menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const closeIcon = document.querySelector('.close-icon');
+const body = document.body;
 
 burgerMenu.addEventListener('click', function() {
     mobileMenu.style.display = 'flex';
+    body.classList.add('no-scroll');
 });
 
 closeIcon.addEventListener('click', function() {
     mobileMenu.style.display = 'none';
+    body.classList.remove('no-scroll');
 });
 
 mobileMenu.querySelectorAll('a').forEach(function(link) {
     link.addEventListener('click', function(event) {
         mobileMenu.style.display = 'none';
+        body.classList.remove('no-scroll');
         
         const targetId = link.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
             event.preventDefault();
-            targetElement.scrollIntoView({ behavior: 'smooth' });
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
@@ -51,11 +55,12 @@ const orderBtnMobile = document.querySelector('.order-btn-mobile');
 
 orderBtnMobile.addEventListener('click', function(event) {
     mobileMenu.style.display = 'none';
+    body.classList.remove('no-scroll');
     
     const targetElement = document.getElementById('work-together');
     if (targetElement) {
         event.preventDefault();
-        targetElement.scrollIntoView({ behavior: 'smooth' });
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 });
 
@@ -63,5 +68,6 @@ orderBtnMobile.addEventListener('click', function(event) {
 window.addEventListener('resize', function() {
     if (window.innerWidth >= 768) {
         mobileMenu.style.display = 'none';
+        body.classList.remove('no-scroll');
     }
 });
